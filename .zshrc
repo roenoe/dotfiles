@@ -102,5 +102,5 @@ source $ZSH/oh-my-zsh.sh
 
 alias vi=vim
 
-eval `keychain --eval id_rsa`
+eval `keychain --eval --quiet id_rsa`
 

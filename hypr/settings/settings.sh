@@ -25,3 +25,5 @@ confDir="conf"
 
 # Start Application
 _getModules $(pwd)/$modules_path
+
+exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh

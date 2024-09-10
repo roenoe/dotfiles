@@ -5,6 +5,14 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="kafeitu"
 
+##eval "$(oh-my-posh init zsh --config /usr/local/bin/.oh-my-posh)"
+
+##HISTFILE=~/.zsh_history
+##HISTSIZE=10000
+##SAVEHIST=10000
+##setopt appendhistory
+
+
 plugins=( 
     git
     archlinux
@@ -12,7 +20,7 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
+ source $ZSH/oh-my-zsh.sh
 
 # Check archlinux plugin commands here
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/archlinux
@@ -22,6 +30,8 @@ source $ZSH/oh-my-zsh.sh
 # Project page: https://gitlab.com/phoneybadger/pokemon-colorscripts#on-other-distros-and-macos
 pokemon-colorscripts --no-title -s -r
 
+# Compatibility with other machines
+export TERM=xterm-256color
 
 ### From this line is for pywal-colors
 # Import colorscheme from 'wal' asynchronously
@@ -36,3 +46,6 @@ pokemon-colorscripts --no-title -s -r
 # To add support for TTYs this line can be optionally added.
 #source ~/.cache/wal/colors-tty.sh
 
+
+# Created by `pipx` on 2024-07-13 18:52:50
+export PATH="$PATH:/home/roenoe/.local/bin"

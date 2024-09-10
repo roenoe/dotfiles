@@ -4,6 +4,9 @@ set nocompatible
 " Enable type file detection. Vim will be able to try to detect the type of file in use.
 filetype on
 
+" Set colorscheme
+colorscheme murphy
+
 " Enable plugins and load plugin for the detected file type.
 filetype plugin on
 
@@ -55,3 +58,4 @@ set hlsearch
 
 " Set the commands to save in history default number is 20.
 set history=1000
+

@@ -32,5 +32,8 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.pl
 # Compatibility with other machines
 export TERM=xterm-256color
 
+# Chezmoi get correct editor
+export EDITOR="nvim"
+
 # Created by `pipx` on 2024-07-13 18:52:50
 export PATH="$PATH:/home/roenoe/.local/bin"

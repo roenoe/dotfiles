@@ -1,0 +1,36 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# History file settings
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+
+# Autocomplete
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-za-z}'
+
+#plugins=( 
+#    git
+#    archlinux
+#    zsh-autosuggestions
+#    zsh-syntax-highlighting
+#)
+
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/roenoe.toml)"
+
+# Plugins
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+
+# Display Pokemon-colorscripts
+# Project page: https://gitlab.com/phoneybadger/pokemon-colorscripts#on-other-distros-and-macos
+# pokemon-colorscripts --no-title -s -r
+
+# Compatibility with other machines
+export TERM=xterm-256color
+
+# Created by `pipx` on 2024-07-13 18:52:50
+export PATH="$PATH:/home/roenoe/.local/bin"

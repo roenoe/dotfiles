@@ -33,7 +33,12 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.pl
 export TERM=xterm-256color
 
 # Chezmoi get correct editor
-export EDITOR="nvim"
+export EDITOR=nvim
+
+# nvim own all vi/vim commands
+alias vi=nvim
+alias vim=nvim
+alias vimdiff="nvim -d"
 
 # Created by `pipx` on 2024-07-13 18:52:50
 export PATH="$PATH:/home/roenoe/.local/bin"

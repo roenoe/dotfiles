@@ -40,5 +40,13 @@ alias vi=nvim
 alias vim=nvim
 alias vimdiff="nvim -d"
 
+# Fix ctrl arrows and del keys
+bindkey "^[[1;5C" forward-word		# ctrl + right arrow
+bindkey "^[[1;5D" backward-word		# ctrl + left arrow
+bindkey "^[[3~" delete-char		# del key
+
+# Make ls command coloured
+alias ls='ls --color'
+
 # Created by `pipx` on 2024-07-13 18:52:50
 export PATH="$PATH:/home/roenoe/.local/bin"

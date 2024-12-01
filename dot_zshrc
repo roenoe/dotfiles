@@ -48,5 +48,8 @@ bindkey "^[[3~" delete-char		# del key
 # Make ls command coloured
 alias ls='ls --color'
 
+# alias for Chezmoi
+alias cz=chezmoi
+
 # Created by `pipx` on 2024-07-13 18:52:50
 export PATH="$PATH:/home/roenoe/.local/bin"

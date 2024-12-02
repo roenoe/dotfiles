@@ -1,33 +1,61 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# History file settings
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-setopt appendhistory
-
-# Autocomplete
-autoload -Uz compinit
-compinit
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-za-z}'
-
-#plugins=( 
-#    git
-#    archlinux
-#    zsh-autosuggestions
-#    zsh-syntax-highlighting
-#)
-
+# Enable ohmyposh
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/roenoe.toml)"
 
-# Plugins
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+# Set zinit directory
+#ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-# Display Pokemon-colorscripts
-# Project page: https://gitlab.com/phoneybadger/pokemon-colorscripts#on-other-distros-and-macos
-# pokemon-colorscripts --no-title -s -r
+# Download Zinit, if it's not there yet
+#if [ ! -d "$ZINIT_HOME" ]; then
+#   mkdir -p "$(dirname $ZINIT_HOME)"
+#   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+#fi
+
+# zinit
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+
+# Load zinit
+#source "{$ZINIT_HOME}/zinit.zsh"
+
+# add zsh plugins
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light Aloxaf/fzf-tab  # Optional for different completions
+
+# Add in snippets
+zinit snippet OMZP::command-not-found
+
+# Load completions
+autoload -Uz compinit && compinit
+zinit cdreplay -q
+
+# Keybindings
+bindkey "^[[1;5C" forward-word		# ctrl + right arrow
+bindkey "^[[1;5D" backward-word		# ctrl + left arrow
+bindkey "^[[3~" delete-char		# del key
+
+# History
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_all_dups
+setopt hist_find_no_dups
+
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}-{A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no  # Optional for different completions
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'  # Optional for different completions
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'  # Optional for different completions, using zoxide
 
 # Compatibility with other machines
 export TERM=xterm-256color
@@ -35,21 +63,17 @@ export TERM=xterm-256color
 # Chezmoi get correct editor
 export EDITOR=nvim
 
-# nvim own all vi/vim commands
+# Aliases
 alias vi=nvim
 alias vim=nvim
 alias vimdiff="nvim -d"
 
-# Fix ctrl arrows and del keys
-bindkey "^[[1;5C" forward-word		# ctrl + right arrow
-bindkey "^[[1;5D" backward-word		# ctrl + left arrow
-bindkey "^[[3~" delete-char		# del key
+alias ls="ls --color"
 
-# Make ls command coloured
-alias ls='ls --color'
-
-# alias for Chezmoi
 alias cz=chezmoi
+
+# Shell integrations
+eval "$(fzf --zsh)"
 
 # Created by `pipx` on 2024-07-13 18:52:50
 export PATH="$PATH:/home/roenoe/.local/bin"

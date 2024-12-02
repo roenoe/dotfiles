@@ -52,16 +52,24 @@ export TERM=xterm-256color
 export EDITOR=nvim
 
 # Aliases
-alias vi=nvim
-alias vim=nvim
-alias vimdiff="nvim -d"
-
-alias ls="ls --color"
-
-alias cz=chezmoi
+alias vi=nvim           # nvim own commands
+alias vim=nvim          # nvim own commands
+alias vimdiff="nvim -d" # nvim own commands
+alias ls="ls --color"   # colourful ls command
+alias cz=chezmoi        # easier typing of stupid french word
+alias ..="cd .."        # faster down one dir
 
 # Shell integrations
 eval "$(fzf --zsh)"
+
+# nilsan esc + backspace rule
+backward-kill-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle backward-kill-word
+    zle -f kill
+}
+zle -N backward-kill-dir
+bindkey '^[^?' backward-kill-dir
 
 # Created by `pipx` on 2024-07-13 18:52:50
 export PATH="$PATH:/home/roenoe/.local/bin"

@@ -82,7 +82,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     powerline_symbol = ''
     background = "p:background"
     foreground = "p:blue"
-    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <p:cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }} <p:cyan>*{{ end }} {{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</> <p:white> </>'
 
     [blocks.segments.properties]
       commit_icon = "@"

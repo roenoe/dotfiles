@@ -76,7 +76,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     powerline_symbol = ''
     background = 'p:background'
     foreground = 'p:magenta'
-    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}<p:lightMagenta>*{{ end }} {{if .BranchStatus }} {{ .BranchStatus }} {{ end }}</> <p:white> </>'
+    template = ' {{ .HEAD }}<p:lightMagenta>{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} {{if .BranchStatus }} {{ .BranchStatus }} {{ end }}</> <p:white> </>'
 
 # git block properties
     [blocks.segments.properties]

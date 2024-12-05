@@ -1,5 +1,6 @@
 # Enable ohmyposh
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/roenoe.toml)"
+#eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/roenoe.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/prod.toml)"
 
 # Download zinit if it's missing, define it's path and load it.
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -11,7 +12,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab  # Optional for different completions
+#zinit light Aloxaf/fzf-tab  # Optional for different completions
 
 # Add in snippets
 zinit snippet OMZP::command-not-found
@@ -41,15 +42,29 @@ setopt hist_find_no_dups
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no  # Optional for different completions
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'  # Optional for different completions
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'  # Optional for different completions, using zoxide
+#zstyle ':completion:*' menu no  # Optional for different completions
+#zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'  # Optional for different completions
+#zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'  # Optional for different completions, using zoxide
 
-# Compatibility with other machines
-export TERM=xterm-256color
+# Environment variables
+export TERM=xterm-256color                    # Compatibility with other machines
+export EDITOR=nvim                            # Chezmoi get correct editor
+#export MACHINAHOSTNAME=(\[$(cat /etc/machinahostname | cut -f1-3 -d".")\])
+#export MACHINAHOSTNAME=$(echo "[$(cat /etc/machinahostname | cut -f1-3 -d".")]")
 
-# Chezmoi get correct editor
-export EDITOR=nvim
+#if [[ -f /etc/machinahostname]]
+#then
+#  export MACHINAHOSTNAME=$(cat /etc/machinahostname | cut -f1-3 -d".")
+#else
+#  export MACHINAHOSTNAME=$HOSTNAME
+#fi
+
+if [[ -f "/etc/machinahostname" ]]
+then
+  export MACHINAHOSTNAME=$(echo "[$(cat /etc/machinahostname | cut -f1-3 -d".")]")
+else
+  export MACHINAHOSTNAME=$(uname -n)
+fi
 
 # Aliases
 alias vi=nvim           # nvim own commands

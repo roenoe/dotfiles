@@ -54,7 +54,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     powerline_symbol = ''
     background = 'p:background'
     foreground = 'p:green'
-    template = ' {{ if .SSHSession }} {{ end }}{{ .UserName }}</><p:blue>@</><p:red>{{ .HostName }}</> <p:white> '
+    template = ' {{ if .SSHSession }} {{ end }}{{ .UserName }}</><p:blue>@</><p:red>{{ .Env.MACHINAHOSTNAME }}</> <p:white> '
 
 # path block
   [[blocks.segments]]
@@ -122,7 +122,14 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   alignment = 'left'
   newline = true
 
-# prompt
+# prompt PROD block
+  [[blocks.segments]]
+    type = 'text'
+    style = 'plain'
+    foreground = 'red'
+    template = '[PROD] '
+
+# prompt arrow
   [[blocks.segments]]
     type = 'text'
     style = 'plain'

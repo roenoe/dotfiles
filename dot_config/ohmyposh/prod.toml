@@ -1,6 +1,6 @@
-version = 3
+console_title_template = '[PROD] {{ if .Root }} root@{{ end }}{{ .Env.MACHINAHOSTNAME }} {{ .PWD }}'
 final_space = true
-console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
 
 # palette for everyone except root
 [palette]

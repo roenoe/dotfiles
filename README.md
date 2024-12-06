@@ -21,7 +21,7 @@ First install all the Dependencies
 `sudo apt install git zsh tmux kitty fzf`
 
 ### For all distros
-(Provided you have curl, git and bash installed)\
+(Provided you have curl and git installed)\
 Oh My Posh:\
 `curl -s https://ohmyposh.dev/install.sh | bash -s`\
 Tmux Plugin Manager:\
@@ -29,5 +29,5 @@ Tmux Plugin Manager:\
 
 ### Actually importing my dotfiles
 Now you can install and apply my dotfiles, which you can do with this one command:\
-`sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME`
+`sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply roenoe`
 

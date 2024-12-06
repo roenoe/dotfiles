@@ -22,10 +22,12 @@ First install all the Dependencies
 
 ### For all distros
 (Provided you have curl, git and bash installed)\
-Oh My Posh: `curl -s https://ohmyposh.dev/install.sh | bash -s`\
-Tmux Plugin Manager: `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`\
+Oh My Posh:\
+`curl -s https://ohmyposh.dev/install.sh | bash -s`\
+Tmux Plugin Manager:\
+`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 
 ### Actually importing my dotfiles
-Now you can install and apply my dotfiles, which you can do with this one command:
+Now you can install and apply my dotfiles, which you can do with this one command:\
 `sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME`
 

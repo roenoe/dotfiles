@@ -34,8 +34,8 @@ Now you can install and apply my dotfiles, which you can do with this one comman
 `sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply roenoe`
 
 ## FAQ
-### "unknown option: --zsh"
+### Zsh complains about "unknown option: --zsh"
 This means you don't have a new enough version of fzf. To fix this error, simply comment the line that says `eval "$(fzf --zsh)"` in your `~/.zshrc` file
 
-### lazy.nvim requires Neovim >= 0.8.0
+### Neovim complains about "lazy.nvim requires Neovim >= 0.8.0""
 This means your Neovim version is old.

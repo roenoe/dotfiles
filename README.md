@@ -11,16 +11,17 @@
 * kitty
 * fzf
 * neovim
+* JetBrains font
 
 ## Automatic installation
 This includes everything from my dotfiles, including the optional stuff\
 First install all the Dependencies
 
 ### For Arch
-`sudo pacman -S git zsh tmux kitty fzf neovim entr`
+`sudo pacman -S git zsh tmux kitty fzf neovim entr ttf-jetbrains-mono-nerd`
 
 ### For Debian
-`sudo apt install git zsh tmux kitty fzf neovim entr`
+`sudo apt install git zsh tmux kitty fzf neovim entr fonts-jetbrains-mono`
 
 ### For all distros
 (Provided you have curl and git installed)\
@@ -34,7 +35,7 @@ Now you can install and apply my dotfiles, which you can do with this one comman
 `sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply roenoe`
 
 ### Extra steps for tmux
-For tmux to work, you need to download the plugins with `<leade> I`.\
+For tmux to work, you need to download the plugins with `<leader> I`.\
 So simply open a tmux session with `tmux` and then press `ctrl+b I`
 
 ### Extra steps for Kitty

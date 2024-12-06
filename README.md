@@ -33,6 +33,10 @@ Tmux Plugin Manager:\
 Now you can install and apply my dotfiles, which you can do with this one command:\
 `sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply roenoe`
 
+### Extra steps for tmux
+For tmux to work, you need to download the plugins with `<leade> I`.\
+So simply open a tmux session with `tmux` and then press `ctrl+b I`
+
 ## FAQ
 ### Zsh complains about "unknown option: --zsh"
 This means you don't have a new enough version of fzf. To fix this error, simply comment the line that says `eval "$(fzf --zsh)"` in your `~/.zshrc` file

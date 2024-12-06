@@ -37,6 +37,9 @@ Now you can install and apply my dotfiles, which you can do with this one comman
 For tmux to work, you need to download the plugins with `<leade> I`.\
 So simply open a tmux session with `tmux` and then press `ctrl+b I`
 
+### Extra steps for Kitty
+I recommend changing the font kitty uses to JetBrains or Fira Code. To do so, simply edit `~/.config/kitty/kitty.conf` and uncomment the font you want to use. Make sure to also comment the font it uses by default (if that's not your preferred font)
+
 ## FAQ
 ### Zsh complains about "unknown option: --zsh"
 This means you don't have a new enough version of fzf. To fix this error, simply comment the line that says `eval "$(fzf --zsh)"` in your `~/.zshrc` file

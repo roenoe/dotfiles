@@ -26,7 +26,7 @@ First install all the Dependencies
 ### For all distros
 (Provided you have curl and git installed)\
 Oh My Posh:\
-`curl -s https://ohmyposh.dev/install.sh | bash -s`\
+`curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin\
 Tmux Plugin Manager:\
 `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 

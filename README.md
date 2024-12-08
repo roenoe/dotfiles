@@ -18,7 +18,7 @@ This includes everything from my dotfiles, including the optional stuff\
 First install all the Dependencies
 
 ### For Arch
-`sudo pacman -S git zsh tmux kitty fzf neovim entr ttf-jetbrains-mono-nerd`
+`sudo pacman -S --needed git zsh tmux kitty fzf neovim entr ttf-jetbrains-mono-nerd`
 
 ### For Debian
 `sudo apt install git zsh tmux kitty fzf neovim entr fonts-jetbrains-mono`

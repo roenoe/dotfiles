@@ -28,7 +28,7 @@ First install all the Dependencies
 Oh My Posh:\
 `curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin`\
 Tmux Plugin Manager:\
-`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+`git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm`
 
 ### Actually importing my dotfiles
 Now you can install and apply my dotfiles, which you can do with this one command:\

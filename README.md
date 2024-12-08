@@ -45,5 +45,5 @@ I recommend changing the font kitty uses to JetBrains or Fira Code. To do so, si
 ### Zsh complains about "unknown option: --zsh"
 This means you don't have a new enough version of fzf. To fix this error, simply comment the line that says `eval "$(fzf --zsh)"` in your `~/.zshrc` file
 
-### Neovim complains about "lazy.nvim requires Neovim >= 0.8.0""
+### Neovim complains about "lazy.nvim requires Neovim >= 0.8.0"
 This means your Neovim version is old.

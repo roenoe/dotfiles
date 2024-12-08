@@ -18,9 +18,9 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # Keybindings
-bindkey "^[[1;5C" forward-word		# ctrl + right arrow
-bindkey "^[[1;5D" backward-word		# ctrl + left arrow
-bindkey "^[[3~" delete-char		# del key
+bindkey "^[[1;5C" forward-word	# ctrl + right arrow
+bindkey "^[[1;5D" backward-word	# ctrl + left arrow
+bindkey "^[[3~" delete-char	# del key
 
 # History
 HISTSIZE=5000
@@ -63,6 +63,7 @@ alias vimdiff="nvim -d" # nvim own commands
 alias ls="ls --color"   # colourful ls command
 alias cz=chezmoi        # easier typing of stupid french word
 alias ..="cd .."        # faster down one dir
+alias lsla="ls -la"	# easier ls -la
 
 # Shell integrations
 eval "$(fzf --zsh)"

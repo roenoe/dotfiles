@@ -32,7 +32,7 @@ Tmux Plugin Manager:\
 
 ### Actually importing my dotfiles
 Now you can install and apply my dotfiles, which you can do with this one command:\
-`sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply roenoe`
+`sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply roenoe`
 
 ### Extra steps for tmux
 For tmux to work, you need to download the plugins with `<leader> I`.\

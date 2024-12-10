@@ -18,14 +18,14 @@ This includes everything from my dotfiles, including the optional stuff\
 First install all the Dependencies
 
 ### For Arch
-`sudo pacman -S --needed git zsh tmux kitty fzf neovim entr ttf-jetbrains-mono-nerd`
+`sudo pacman -S --needed git zsh tmux kitty fzf neovim entr ttf-jetbrains-mono-nerd git curl`
 
 ### For Debian
-`sudo apt install git zsh tmux kitty fzf neovim entr`
+`sudo apt install git zsh tmux kitty fzf neovim entr git curl`
 
 ### For all distros
-(Provided you have curl and git installed)\
 Oh My Posh:\
+`mkdir -p .local/bin`\
 `curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin`\
 Tmux Plugin Manager:\
 `git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm`

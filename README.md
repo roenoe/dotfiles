@@ -44,7 +44,7 @@ These are some extra steps for installing different optional parts of my dotfile
 First install the correct font\
 `oh-my-posh font install JetBrainsMono`\
 Then you need to change the font in gnome-terminal to the correct font (menu > preferences > profiles > \[your profile (usually unnamed)\] > custom font > JetBrainsMonoNL Nerd Font)\
-If your font in your terminal now looks weird, reboot
+For some reason gnome-terminal has very weird font spacing if you change your font without rebooting. To fix this, simply reboot
 
 ### Tmux
 For tmux to work, you need to download the plugins with `<leader> I`.\

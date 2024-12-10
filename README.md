@@ -34,17 +34,23 @@ Tmux Plugin Manager:\
 Now you can install and apply my dotfiles, which you can do with this one command:\
 `sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply roenoe`
 
-### Extra steps for correct nerd font in gnome-terminal
+### Changing shell to zsh
+`chsh -s $(which zsh)`
+
+## Extra steps for various different options
+These are some extra steps for installing different optional parts of my dotfiles
+
+### Correct nerd font in gnome-terminal
 First install the correct font\
 `oh-my-posh font install JetBrainsMono`\
 Then you need to change the font in gnome-terminal to the correct font (menu > preferences > profiles > \[your profile (usually unnamed)\] > custom font > JetBrainsMonoNL Nerd Font)\
 If your font in your terminal now looks weird, reboot
 
-### Extra steps for tmux
+### Tmux
 For tmux to work, you need to download the plugins with `<leader> I`.\
 So simply open a tmux session with `tmux` and then press `ctrl+b I`
 
-### Extra steps for Kitty
+### Kitty
 I recommend changing the font kitty uses to JetBrains or Fira Code. To do so, simply edit `~/.config/kitty/kitty.conf` and uncomment the font you want to use. Make sure to also comment the font it uses by default (if that's not your preferred font)
 
 ## FAQ

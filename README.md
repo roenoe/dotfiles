@@ -21,7 +21,7 @@ First install all the Dependencies
 `sudo pacman -S --needed git zsh tmux kitty fzf neovim entr ttf-jetbrains-mono-nerd`
 
 ### For Debian
-`sudo apt install git zsh tmux kitty fzf neovim entr fonts-jetbrains-mono`
+`sudo apt install git zsh tmux kitty fzf neovim entr`
 
 ### For all distros
 (Provided you have curl and git installed)\
@@ -33,6 +33,12 @@ Tmux Plugin Manager:\
 ### Actually importing my dotfiles
 Now you can install and apply my dotfiles, which you can do with this one command:\
 `sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply roenoe`
+
+### Extra steps for correct nerd font in gnome-terminal
+First install the correct font\
+`oh-my-posh font install JetBrainsMono`\
+Then you need to change the font in gnome-terminal to the correct font (menu > preferences > profiles > \[your profile (usually unnamed)\] > custom font > JetBrainsMonoNL Nerd Font)\
+If your font in your terminal now looks weird, reboot
 
 ### Extra steps for tmux
 For tmux to work, you need to download the plugins with `<leader> I`.\

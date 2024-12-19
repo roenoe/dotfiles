@@ -1,5 +1,7 @@
 # This is a readme file
 
+# This file is outdated!!!
+
 ## Dependencies
 * git
 * zsh

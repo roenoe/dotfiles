@@ -78,5 +78,6 @@ zle -N backward-kill-dir
 bindkey '^[^?' backward-kill-dir
 
 # Enable ohmyposh
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/user.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/roenoe.toml)"
+#eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/user.toml)"
 #eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/prod.toml)"

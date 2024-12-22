@@ -61,3 +61,7 @@ This means you don't have a new enough version of fzf. To fix this error, simply
 
 ### Neovim complains about "lazy.nvim requires Neovim >= 0.8.0"
 This means your Neovim version is old.
+
+### Ssh agent in hyprland
+See [this](https://www.lorenzobettini.it/2023/09/hyprland-and-ssh-agent/)
+

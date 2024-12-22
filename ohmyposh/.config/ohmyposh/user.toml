@@ -32,51 +32,66 @@ version = 3
     cyan = '#000000'
     white = '#ffffff'
 
-# left blocks
+###############
+# left blocks #
+###############
+
+# OS icon block
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
   newline = true
 
-# OS icon block
   [[blocks.segments]]
     type = 'os'
     style = 'powerline'
     powerline_symbol = ''
     background = 'p:background'
     foreground = 'p:white'
-    template = '{{.Icon}}  '
+    template = '{{.Icon}} '
 
 # username@host block
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
   [[blocks.segments]]
     type = 'session'
     style = 'powerline'
     powerline_symbol = ''
     background = 'p:background'
     foreground = 'p:green'
-    template = ' {{ if .SSHSession }} {{ end }}{{ .UserName }}</><p:blue>@</><p:red>{{ .HostName }}</> <p:white> '
+    template = ' {{ if .SSHSession }} {{ end }}{{ .UserName }}</><p:blue>@</><p:red>{{ .HostName }} '
 
 # path block
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
   [[blocks.segments]]
     type = 'path'
     style = 'powerline'
     powerline_symbol = ''
     foreground = 'p:yellow'
     background = 'p:background'
-    template = ' {{ .Path }}</> <p:white> '
+    template = ' {{ .Path }}</> '
 
 # path block properties 
     [blocks.segments.properties]
       style = 'full'
 
 # git block
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
   [[blocks.segments]]
     type = 'git'
     style = 'powerline'
     powerline_symbol = ''
     background = 'p:background'
     foreground = 'p:magenta'
-    template = ' {{ .HEAD }}<p:lightMagenta>{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} {{if .BranchStatus }} {{ .BranchStatus }} {{ end }}</> <p:white> </>'
+    template = ' {{ .HEAD }}<p:lightMagenta>{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} {{if .BranchStatus }} {{ .BranchStatus }} {{ end }}</>'
 
 # git block properties
     [blocks.segments.properties]
@@ -84,6 +99,10 @@ version = 3
       fetch_status = true
 
 # time block 
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
   [[blocks.segments]]
     type = 'time'
     style = 'powerline'
@@ -96,8 +115,10 @@ version = 3
     [blocks.segments.properties]
       time_format = '15:04'
 
+###############
+# right block #
+###############
 
-# right hand side blocks
 [[blocks]]
   type = 'rprompt'
   overflow = 'hidden'
@@ -115,8 +136,10 @@ version = 3
 # executiontime properties
     [blocks.segments.properties]
       threshold = 5000
+###############
+# second line #
+###############
 
-# second line
 [[blocks]]
   type = 'prompt'
   alignment = 'left'

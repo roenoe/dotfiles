@@ -68,7 +68,7 @@ alias ..="cd .."        # faster down one dir
 # Shell integrations
 eval "$(fzf --zsh)"
 
-# nilsan esc + backspace rule
+# Exc + backspace bash parity
 backward-kill-dir () {
     local WORDCHARS=${WORDCHARS/\/}
     zle backward-kill-word

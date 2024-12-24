@@ -53,6 +53,7 @@ vim.g.have_nerd_font = true
 
 -- Make line numbers default
 vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- Tabs, spaces, and everything else that is useful
 vim.opt.expandtab = true
@@ -767,7 +768,7 @@ require('lazy').setup({
     'ellisonleao/gruvbox.nvim',
     priority = 1000, -- make sure to load this before other plugins
     opts = {
-      contrast = 'asdf', -- can be set to "hard", "soft", or empty string
+      contrast = 'hard', -- can be set to "hard", "soft", or empty string
     },
     init = function()
       vim.cmd.colorscheme 'gruvbox'

@@ -71,7 +71,7 @@ window#waybar.hidden {
   /*default: background: #bd93f9;*/
 }
 
-#wireplumber {
+#network {
   margin-top: 6px;
   margin-left: 8px;
   padding-left: 10px;
@@ -112,7 +112,7 @@ window#waybar.hidden {
   }
 }
 
-#backlight {
+#UNUSED {
   margin-top: 6px;
   margin-left: 8px;
   padding-left: 10px;
@@ -124,7 +124,7 @@ window#waybar.hidden {
   background: #f8bd96;
 }
 
-#clock {
+#custom.power {
   margin-top: 6px;
   margin-left: 8px;
   margin-right: 8px;
@@ -138,7 +138,7 @@ window#waybar.hidden {
   /*default: background: #abe9b3; */
 }
 
-#memory {
+#window {
   margin-top: 6px;
   margin-left: 8px;
   padding-left: 10px;
@@ -151,14 +151,14 @@ window#waybar.hidden {
   /*default: background: #ddb6f2; */
 }
 
-#cpu {
+#clock {
   margin-top: 6px;
   margin-left: 8px;
   padding-left: 10px;
   margin-bottom: 0px;
   padding-right: 10px;
   border-radius: 10px;
-  transition: none;
+/*  transition: none;*/
   color: #161320;
   background: #b8bb26;
   /*default: background: #96cdfb; */

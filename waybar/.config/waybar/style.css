@@ -1,13 +1,15 @@
 * {
   border: none;
-  border-radius: 8;
-  font-family: "JetbrainsMono Nerd Font";
+  border-radius: 0;
+  /*font-family: "JetbrainsMono Nerd Font";*/
+  font-family: "Maple Mono";
   font-size: 16px;
   min-height: 20px;
 }
 
 window#waybar {
-  background: transparent;
+  /*background: transparent;*/
+  background: #111111;
 }
 
 window#waybar.hidden {
@@ -31,7 +33,7 @@ window#waybar.hidden {
   font-weight: 500;
   margin-bottom: 0px;
   border-radius: 10px;
-  background: #282828;
+  background: #111111;
   /* default: background: #161320; */
   transition: none;
 }

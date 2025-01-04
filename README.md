@@ -65,3 +65,5 @@ This means your Neovim version is old.
 ### Ssh agent in hyprland
 See [this](https://www.lorenzobettini.it/2023/09/hyprland-and-ssh-agent/)
 
+### Broken xdg-desktop-portal
+See [this](https://www.reddit.com/r/openSUSE/comments/16v0vk7/comment/k30mxyr/)

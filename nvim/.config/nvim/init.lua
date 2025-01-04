@@ -768,7 +768,10 @@ require('lazy').setup({
     'ellisonleao/gruvbox.nvim',
     priority = 1000, -- make sure to load this before other plugins
     opts = {
-      contrast = 'hard', -- can be set to "hard", "soft", or empty string
+      contrast = 'asdf', -- can be set to "hard", "soft", or empty string
+      palette_overrides = {
+        dark0_hard = '#1b1b1b',
+      },
     },
     init = function()
       vim.cmd.colorscheme 'gruvbox'

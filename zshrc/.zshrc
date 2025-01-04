@@ -62,8 +62,8 @@ alias vi=nvim           # nvim own commands
 alias vim=nvim          # nvim own commands
 alias vimdiff="nvim -d" # nvim own commands
 alias ls="ls --color"   # colourful ls command
-alias cz=chezmoi        # easier typing of stupid french word
 alias ..="cd .."        # faster down one dir
+alias fetch="clear ; fastfetch"
 
 # Shell integrations
 eval "$(fzf --zsh)"

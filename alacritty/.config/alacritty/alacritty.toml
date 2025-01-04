@@ -1,7 +1,7 @@
 general.live_config_reload = true # set config to live reload on change
 
 [font]  # font stuff
-size = 14.0
+size = 13.0
 
 [font.normal]
 family = "Maple Mono"
@@ -32,9 +32,9 @@ opacity = 1.0
 # Default colors
 [colors.primary]
 # hard contrast background = = '#1d2021'
-#background = '#282828'
-#background = '#1d2021'
-background = '#111111'
+#background = '#282828' # Gruvbox medium
+background = '#1d2021'  # Gruvbox dark hard
+#background = '#111111'
 # soft contrast background = = '#32302f'
 foreground = '#ebdbb2'
 

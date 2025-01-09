@@ -76,8 +76,10 @@ backward-kill-dir () {
 }
 zle -N backward-kill-dir
 bindkey '^[^?' backward-kill-dir
+fastfetch
 
-# Enable ohmyposh
+# Enable ohmyposh / starship
+#eval "$(starship init zsh)"
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/roenoe.toml)"
 #eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/user.toml)"
 #eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/prod.toml)"

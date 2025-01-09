@@ -75,13 +75,13 @@ button:hover {
 }
 
 #network {
-    color: @lightred;
-    border-bottom: 2px solid @lightred;
+    color: @yellow;
+    border-bottom: 2px solid @yellow;
 }
 
 #battery {
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
+    color: @lightred;
+    border-bottom: 2px solid @lightred;
 }
 
 #window {

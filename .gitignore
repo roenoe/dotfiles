@@ -3,3 +3,6 @@ hyprland/.config/hypr/monitors.conf
 
 # Ignore lazylock
 nvim/.config/nvim/lazy-lock.json
+
+# Ignore tmux plugins folder
+tmux/.config/tmux/plugins/

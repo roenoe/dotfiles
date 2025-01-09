@@ -1,15 +1,10 @@
-
 #!/bin/bash
 
-WALLPAPER_DIRECTORY=~/Pictures/wallpaper
+hyprctl hyprpaper unload all
 
-WALLPAPER=$(find "$WALLPAPER_DIRECTORY" -type f | shuf -n 1)
+WALL_DIR=$HOME/Pictures/wallpaper/
+
+WALLPAPER=$(find "$WALL_DIR" -type f | shuf -n 1)
 
 hyprctl hyprpaper preload "$WALLPAPER"
-hyprctl hyprpaper wallpaper ",$WALLPAPER"
-
-sleep 1
-
-hyprctl hyprpaper unload unused
-
 hyprctl hyprpaper wallpaper ",$WALLPAPER"

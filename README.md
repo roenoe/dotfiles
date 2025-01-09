@@ -30,7 +30,8 @@ Oh My Posh:\
 `mkdir -p ~/.local/bin`\
 `curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin`\
 Tmux Plugin Manager:\
-`git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm`
+`mkdir -p ~/.local/share/tmux`\
+`git clone https://github.com/tmux-plugins/tpm ~/.local/share/tmux/plugins/tpm`
 
 ### Actually importing my dotfiles
 Now you can install and apply my dotfiles, which you can do with this one command:\

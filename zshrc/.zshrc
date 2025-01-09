@@ -61,7 +61,7 @@ fi
 alias vi=nvim           # nvim own commands
 alias vim=nvim          # nvim own commands
 alias vimdiff="nvim -d" # nvim own commands
-alias ls="ls --color"   # colourful ls command
+alias ls="ls --color -a"   # colourful ls command
 alias ..="cd .."        # faster down one dir
 alias fetch="clear ; fastfetch"
 

@@ -30,6 +30,10 @@
       "on-scroll-down": "hyprctl dispatch workspace -1",
     },
 
+    "hyprland/window": {
+      "separate-outputs": true
+    },
+
     "idle_inhibitor": {
       "format": "{icon}",
       "format-icons": {

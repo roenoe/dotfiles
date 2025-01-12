@@ -1,19 +1,30 @@
 # This is a readme file
 
-# This file is outdated!!!
-
 ## Dependencies
-* git
-* zsh
-* [Oh My Posh](https://ohmyposh.dev/docs/installation/linux)
-
-* tmux
-* [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
-* entr
+* Stow
+### Different terminal options
+* Alacritty
+* ghostty
 * kitty
+### Hyprland and stuff
+* fuzzel // wofi
+* hyprland
+* hypridle
+* hyprlock
+* hyprpaper
+* waybar
+### Prompt
+* [Oh My Posh](https://ohmyposh.dev/docs/installation/linux)
+* zsh
 * fzf
+### Other tools
+* fastfetch
+* tmux
+* entr
+* [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 * neovim
-* JetBrains font
+
+# This file is outdated!!!
 
 ## Automatic installation
 This includes everything from my dotfiles, including the optional stuff\
@@ -31,10 +42,6 @@ Oh My Posh:\
 `curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin`\
 Tmux Plugin Manager:\
 `git clone https://github.com/tmux-plugins/tpm ~/.local/share/tmux/plugins/tpm`
-
-### Actually importing my dotfiles
-Now you can install and apply my dotfiles, which you can do with this one command:\
-`sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply roenoe`
 
 ### Changing shell to zsh
 `chsh -s $(which zsh)`

@@ -17,6 +17,7 @@
 * [Oh My Posh](https://ohmyposh.dev/docs/installation/linux)
 * zsh
 * fzf
+* unzip
 ### Other tools
 * fastfetch
 * tmux

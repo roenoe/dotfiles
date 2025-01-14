@@ -12,6 +12,7 @@
 * hypridle
 * hyprlock
 * hyprpaper
+* hyprshot
 * waybar
 ### Prompt
 * [Oh My Posh](https://ohmyposh.dev/docs/installation/linux)

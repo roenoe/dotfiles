@@ -35,7 +35,7 @@ mouse_warping container
 
 ### Autostart
 exec waybar
-#?exec swaync
+exec swaync
 exec sleep 1 ; nm-applet --indicator
 exec hypridle
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

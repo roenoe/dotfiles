@@ -21,7 +21,7 @@ set $menu fuzzel
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg $HOME/Pictures/wallpaper/cute_duck_with_flowers_pink_and_white_doodle_style.png fill
 #
 # Example configuration:
 #
@@ -33,8 +33,14 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 focus_follows_mouse no
 mouse_warping container
 
-### Idle configuration
+### Autostart
+exec waybar
+#?exec swaync
+exec sleep 1 ; nm-applet --indicator
 exec hypridle
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+### Idle configuration
 
 #
 # Example configuration:
@@ -219,25 +225,5 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
     bindsym Print exec grim
-
-#
-### Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-exec waybar
-
-#bar {
-#    position top
-#
-#    # When the status_command prints a new line to stdout, swaybar updates.
-#    # The default just shows the current date and time.
-#    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-#
-#    colors {
-#        statusline #ffffff
-#        background #323232
-#        inactive_workspace #32323200 #32323200 #5c5c5c
-#    }
-#}
 
 include /etc/sway/config.d/*

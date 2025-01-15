@@ -36,7 +36,7 @@ mouse_warping container
 ### Autostart
 exec waybar
 exec swaync
-exec sleep 1 ; nm-applet --indicator
+exec nm-applet --indicator
 exec hypridle
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
@@ -225,5 +225,7 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
     bindsym Print exec grim
+    # Lock screen
+    bindsym $mod+Escape exec hyprlock
 
 include /etc/sway/config.d/*

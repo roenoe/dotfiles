@@ -76,7 +76,7 @@ backward-kill-dir () {
 }
 zle -N backward-kill-dir
 bindkey '^[^?' backward-kill-dir
-fastfetch
+pfetch
 
 # Enable ohmyposh / starship
 #eval "$(starship init zsh)"

@@ -21,7 +21,7 @@ set $menu fuzzel
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg $HOME/Pictures/wallpaper/cute_duck_with_flowers_pink_and_white_doodle_style.png fill
+#output * bg $HOME/Pictures/wallpaper/cute_duck_with_flowers_pink_and_white_doodle_style.png fill
 #
 # Example configuration:
 include $HOME/.config/sway/monitors.conf

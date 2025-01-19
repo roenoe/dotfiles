@@ -17,6 +17,8 @@ set $right l
 set $term ghostty
 # Your preferred application launcher
 set $menu fuzzel
+# Set your preferred screenshot tool
+set $screenshot hyprshot -m region
 
 ### Output configuration
 #
@@ -33,6 +35,9 @@ include $HOME/.config/sway/monitors.conf
 ### Options
 focus_follows_mouse no
 mouse_warping container
+
+### Environment variables
+exec export HYPRSHOT_DIR=$HOME/Pictures/screenshots/
 
 ### Autostart
 exec waybar
@@ -244,8 +249,9 @@ bindsym $mod+r mode "resize"
     # Special keys to adjust brightness via brightnessctl
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
-    # Special key to take a screenshot with grim
-    bindsym Print exec grim
+    # Special key to take a screenshot
+    bindsym Print exec $screenshot
+    bindsym $mod+Shift+s exec $screenshot
     # Lock screen
     bindsym $mod+Escape exec hyprlock
 

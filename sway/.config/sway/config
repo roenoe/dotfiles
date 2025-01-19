@@ -19,6 +19,8 @@ set $term ghostty
 set $menu fuzzel
 # Set your preferred screenshot tool
 set $screenshot hyprshot -m region
+# Set wallpaper change utility
+set $changeWallpaper sh ~/.config/sway/change-wallpaper.sh
 
 ### Output configuration
 #
@@ -34,7 +36,7 @@ include $HOME/.config/sway/monitors.conf
 
 ### Options
 focus_follows_mouse no
-mouse_warping container
+#mouse_warping container
 
 ### Environment variables
 exec export HYPRSHOT_DIR=$HOME/Pictures/screenshots/
@@ -45,6 +47,7 @@ exec swaync
 exec nm-applet --indicator
 exec hypridle
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec $changeWallpaper
 
 ### Idle configuration
 
@@ -92,7 +95,6 @@ input * {
 
     # Start your launcher
     bindsym --release Super_L exec pkill $menu || $menu
-    #bindsym $mod+Space exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -103,6 +105,12 @@ input * {
 
     # Reload the configuration file
     bindsym $mod+Shift+r reload
+
+    # Toggle waybar
+    bindsym $mod+b exec pkill waybar || waybar
+
+    # Change wallpaper
+    bindsym $mod+w exec $changeWallpaper
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+Escape exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -181,14 +189,14 @@ input * {
 # Layout stuff:
 #
     # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
+    # $mod+pipe or $mod+minus, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    bindsym $mod+bar splith
+    bindsym $mod+minus splitv
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
+    bindsym $mod+t layout tabbed
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
@@ -209,11 +217,11 @@ input * {
     # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
+    #bindsym $mod+Shift+minus move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
+    #bindsym $mod+minus scratchpad show
 #
 # Resizing containers:
 #

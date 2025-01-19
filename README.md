@@ -6,14 +6,20 @@
 * Alacritty
 * ghostty
 * kitty
-### Hyprland and stuff
+### Window Managers
 * fuzzel // wofi
+* waybar
+#### Hyprland
 * hyprland
 * hypridle
 * hyprlock
 * hyprpaper
 * hyprshot
-* waybar
+#### Sway
+* sway // swayfx
+* swaybg
+* sway*\idle+lock // hypr*idle+lock
+* SCREENSHOT UTIL
 ### Prompt
 * [Oh My Posh](https://ohmyposh.dev/docs/installation/linux)
 * zsh

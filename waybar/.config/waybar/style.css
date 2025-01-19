@@ -87,6 +87,7 @@ button:hover {
     border-bottom: 2px solid @yellow;
 }
 
+#mode,
 #battery {
     color: @lightred;
     border-bottom: 2px solid @lightred;

@@ -13,12 +13,20 @@ set $left h
 set $down j
 set $up k
 set $right l
+
+# Set your preferred lock tool (swaylock / hyprlock
+#set $lock pidof hyprlock || hyprlock
+set $lock pidof swaylock || sh ~/.config/sway/swaylock.sh
+
 # Your preferred terminal emulator
 set $term ghostty
+
 # Your preferred application launcher
 set $menu fuzzel
+
 # Set your preferred screenshot tool
 set $screenshot hyprshot -m region
+
 # Set wallpaper change utility
 set $changeWallpaper sh ~/.config/sway/change-wallpaper.sh
 
@@ -198,9 +206,8 @@ bindsym $mod+bar splith
 bindsym $mod+minus splitv
 
 # Switch the current container between different layout styles
-bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+o layout toggle split
 
 # Make the current focus fullscreen
 bindsym $mod+f fullscreen
@@ -213,6 +220,7 @@ bindsym $mod+Shift+f floating toggle
 
 # Move focus to the parent container
 bindsym $mod+a focus parent
+bindsym $mod+e focus child
 
 ### Scratchpad:
 
@@ -233,16 +241,16 @@ mode "resize" {
   # right will grow the containers width
   # up will shrink the containers height
   # down will grow the containers height
-  bindsym $left resize shrink width 10px
-  bindsym $down resize grow height 10px
-  bindsym $up resize shrink height 10px
-  bindsym $right resize grow width 10px
+  bindsym $left resize shrink width 50px
+  bindsym $down resize grow height 50px
+  bindsym $up resize shrink height 50px
+  bindsym $right resize grow width 50px
 
   # Ditto, with arrow keys
-  bindsym Left resize shrink width 10px
-  bindsym Down resize grow height 10px
-  bindsym Up resize shrink height 10px
-  bindsym Right resize grow width 10px
+  bindsym Left resize shrink width 50px
+  bindsym Down resize grow height 50px
+  bindsym Up resize shrink height 50px
+  bindsym Right resize grow width 50px
 
   # Return to default mode
   bindsym Return mode "default"
@@ -264,6 +272,6 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym Print exec $screenshot
 bindsym $mod+Shift+s exec $screenshot
 # Lock screen
-bindsym $mod+Escape exec hyprlock
+bindsym $mod+Escape exec $lock
 
 include /etc/sway/config.d/*

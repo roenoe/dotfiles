@@ -4,14 +4,14 @@
 LOCKUTIL=swaylock
 #LOCK="pidof hyprlock || hyprlock"
 LOCK="pidof swaylock || sh ~/.config/sway/swaylock.sh"
+SLEEP="pidof $LOCKUTIL && (hyprctl dispatch dpms off || swaymsg 'output * dpms off')"
+UNSLEEP="hyprctl dispatch dpms on || swaymsg 'output * dpms on'"
 
 swayidle -w \
-  timeout 10 "pidof "$LOCKUTIL" && $(hyprctl dispatch dpms off || swaymsg "output * power off")" \
-  resume "hyprctl dispatch dpms on || swaymsg "output * power on""\
+  timeout 10 "$SLEEP" \
+  resume "$UNSLEEP" \
   \
-  timeout 570 "Your display is about to go to sleep" \
+  timeout 570 "notify-send 'Your display is about to go to sleep'" \
   \
-  timeout 600 "hyprctl dispatch dpms off || swaymsg "output * power off" ; $LOCK" \
-  resume "hyprctl dispatch dpms on || swaymsg "output * power on"" \
-  before-sleep "swaylock -f -c 000000"
-
+  timeout 600 "$LOCK && $SLEEP" \
+  resume "$UNSLEEP"

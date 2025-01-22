@@ -29,7 +29,8 @@ set $term ghostty
 set $menu fuzzel
 
 # Set your preferred screenshot tool
-set $screenshot hyprshot -m region
+#set $screenshot hyprshot -m region
+set $screenshot sh ~/.config/sway/grim.sh
 
 # Set wallpaper change utility
 set $changeWallpaper sh ~/.config/sway/change-wallpaper.sh

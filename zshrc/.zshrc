@@ -63,7 +63,7 @@ alias vim=nvim          # nvim own commands
 alias vimdiff="nvim -d" # nvim own commands
 alias ls="ls --color -a"   # colourful ls command
 alias ..="cd .."        # faster down one dir
-alias fetch="clear ; fastfetch"
+alias fetch="fastfetch --config examples/8"
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -76,7 +76,8 @@ backward-kill-dir () {
 }
 zle -N backward-kill-dir
 bindkey '^[^?' backward-kill-dir
-pfetch
+
+fetch
 
 # Enable ohmyposh / starship
 #eval "$(starship init zsh)"

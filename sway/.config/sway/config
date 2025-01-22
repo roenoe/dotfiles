@@ -14,9 +14,13 @@ set $down j
 set $up k
 set $right l
 
-# Set your preferred lock tool (swaylock / hyprlock
+# Set your preferred lock tool (swaylock / hyprlock)
 #set $lock pidof hyprlock || hyprlock
 set $lock pidof swaylock || sh ~/.config/sway/swaylock.sh
+
+# Set your preferred idle tool (swayidle / hypridle)
+#set $idle hypridle
+set $idle sh ~/.config/sway/swayidle.sh
 
 # Your preferred terminal emulator
 set $term ghostty
@@ -56,23 +60,9 @@ exec export HYPRSHOT_DIR=$HOME/Pictures/screenshots/
 exec waybar
 exec swaync
 exec nm-applet --indicator
-exec hypridle
+exec $idle
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec $changeWallpaper
-
-### Idle configuration
-
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
 #

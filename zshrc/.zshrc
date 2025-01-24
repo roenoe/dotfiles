@@ -63,7 +63,7 @@ alias vim=nvim          # nvim own commands
 alias vimdiff="nvim -d" # nvim own commands
 alias ls="ls --color -a"   # colourful ls command
 alias ..="cd .."        # faster down one dir
-alias fetch="fastfetch --config .config/fastfetch/autostart.jsonc"
+alias fetch="fastfetch --config ~/.config/fastfetch/autostart.jsonc"
 
 # Shell integrations
 eval "$(fzf --zsh)"

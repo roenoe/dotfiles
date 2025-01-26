@@ -1,6 +1,6 @@
 # GTK style settings
 gtk-titlebar = false
-gtk-adwaita = true
+gtk-adwaita = false
 gtk-tabs-location = top
 #gtk-toolbar-style = raised
 
@@ -10,7 +10,7 @@ font-size = 13
 
 # Colours
 theme = GruvboxDarkHard
-background-opacity = 1
+background-opacity = 0.8
 
 # Keybinds
 keybind = ctrl+shift+f5=reload_config

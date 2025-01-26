@@ -1,0 +1,85 @@
+console_title_template = "{{ if .Root }} root@{{ end }}{{ .HostName }} {{ .PWD }}"
+final_space = true
+version = 3
+enable_cursor_positioning = true  # if you have issues with your prompt taking a while to start, disable this
+
+# Left block
+[[blocks]]
+  type = "prompt"
+  alignment = "left"
+  newline = true
+
+## OS block
+  [[blocks.segments]]
+    type = "os"
+    template = '{{.Icon}} '
+    background = "black"
+    foreground = "lightWhite"
+    style = "diamond"
+    leading_diamond = ""
+
+## Username block
+  [[blocks.segments]]
+    type = "session"
+    template = "{{ if .SSHSession }} {{ end }}{{ .UserName }}"
+    background = "green"
+    foreground = "black"
+    style = "powerline"
+    powerline_symbol = ""
+
+## Host block
+  [[blocks.segments]]
+  type = "session"
+  template = "{{ .HostName }}"
+  background = "blue"
+  foreground = "black"
+  style = "powerline"
+  powerline_symbol = ""
+
+## Path block
+  [[blocks.segments]]
+    type = "path"
+    template = "{{ .Path}}"
+    background = "yellow"
+    foreground = "black"
+    style = "powerline"
+    powerline_symbol = ""
+### Path block properties
+    [blocks.segments.properties]
+      style = "full"
+
+## Git block
+  [[blocks.segments]]
+    type = "git"
+    template = "{{ .HEAD }}<lightWhite>{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} {{if .BranchStatus }} {{ .BranchStatus }} {{ end }}</>"
+    background = "magenta"
+    foreground = "black"
+    style = "powerline"
+    powerline_symbol = ""
+### Git block properties
+    [blocks.segments.properties]
+      fetch_status = true
+      #commit_icon = "@"
+
+
+
+# Second line
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+# Prompt
+  [[blocks.segments]]
+    type = 'text'
+    style = 'plain'
+    foreground_templates = ['{{if gt .Code 0}}red{{end}}',]
+    foreground = 'green'
+    template = '❯'
+
+# Transient prompt
+#[transient_prompt]
+#  background = 'transparent'
+#  foreground = 'green' 
+#  foreground_templates = ['{{if gt .Code 0}}red{{end}}',]
+#  template = '❯ '

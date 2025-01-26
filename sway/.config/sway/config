@@ -40,12 +40,10 @@ set $changeWallpaper sh ~/.config/sway/change-wallpaper.sh
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg $HOME/Pictures/wallpaper/cute_duck_with_flowers_pink_and_white_doodle_style.png fill
 #
-# Example configuration:
 include $HOME/.config/sway/monitors.conf
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+### Eyecandy with swayfx
+include $HOME/.config/sway/swayfx.conf
 
 ### Options
 focus_follows_mouse no

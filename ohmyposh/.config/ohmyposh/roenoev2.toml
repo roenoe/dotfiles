@@ -22,6 +22,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
   [[blocks.segments]]
     type = "session"
     template = "{{ if .SSHSession }} {{ end }}{{ .UserName }}"
+    background_templates = ['{{if .Root }}red{{end}}',]
     background = "green"
     foreground = "black"
     style = "powerline"
@@ -61,6 +62,19 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
       fetch_status = true
       #commit_icon = "@"
 
+# executiontime block
+  [[blocks.segments]]
+    type = 'executiontime'
+    template = "{{ .FormattedMs }}"
+    style = 'accordion'
+    powerline_symbol = ""
+    foreground = 'black'
+    background = 'red'
+
+# executiontime properties
+    [blocks.segments.properties]
+      threshold = 5000
+
 
 
 # Second line
@@ -75,7 +89,8 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
     style = 'plain'
     foreground_templates = ['{{if gt .Code 0}}red{{end}}',]
     foreground = 'green'
-    template = '❯'
+#template = '❯'
+    template = "{{ if .Root}}#{{ else }}->{{ end }}"
 
 # Transient prompt
 #[transient_prompt]

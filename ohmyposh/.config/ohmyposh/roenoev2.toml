@@ -6,6 +6,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
 # Palette
 [palette]
   orange = "#d65d0e"
+  cisBlack = "#1b1b1a"
 
 # Left block
 [[blocks]]
@@ -13,12 +14,10 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
   alignment = "left"
   newline = true
 
-## OS block
   [[blocks.segments]]
     type = "os"
-    template = ' {{.Icon}} '
-    background = "black"
-    foreground_templates = ["{{ if .Root }}red{{ end }}",]
+    template = "{{ .Icon }} "
+    background = "p:cisBlack"
     foreground = "lightWhite"
     style = "diamond"
     leading_diamond = ""

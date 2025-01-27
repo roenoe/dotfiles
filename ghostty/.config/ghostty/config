@@ -1,3 +1,4 @@
+palette = 0=#1b1b1b
 # GTK style settings
 gtk-titlebar = false
 gtk-adwaita = false

@@ -3,6 +3,10 @@ final_space = true
 version = 3
 enable_cursor_positioning = true  # if you have issues with your prompt taking a while to start, disable this
 
+# Palette
+[palette]
+  orange = "#d65d0e"
+
 # Left block
 [[blocks]]
   type = "prompt"
@@ -12,39 +16,52 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
 ## OS block
   [[blocks.segments]]
     type = "os"
-    template = '{{.Icon}} '
+    template = ' {{.Icon}} '
     background = "black"
     foreground = "lightWhite"
     style = "diamond"
     leading_diamond = ""
 
+## Root block
+  [[blocks.segments]]
+    type = "root"
+    template = " sudo"
+    background = "red"
+    foreground = "lightWhite"
+    style = "accordion"
+#powerline_symbol = ""
+    powerline_symbol = ""
+
 ## Username block
   [[blocks.segments]]
     type = "session"
-    template = "{{ if .SSHSession }} {{ end }}{{ .UserName }}"
-    background_templates = ['{{if .Root }}red{{end}}',]
+    template = " {{ if .SSHSession }} {{ end }}{{ .UserName }}"
+#background_templates = ['{{if .Root }}red{{end}}',]
     background = "green"
     foreground = "black"
-    style = "powerline"
-    powerline_symbol = ""
+    style = "accordion"
+#powerline_symbol = ""
+    powerline_symbol = ""
 
 ## Host block
   [[blocks.segments]]
-  type = "session"
-  template = "{{ .HostName }}"
-  background = "blue"
-  foreground = "black"
-  style = "powerline"
-  powerline_symbol = ""
+    type = "session"
+    template = " {{ .HostName }}"
+    background = "blue"
+    foreground = "black"
+    style = "accordion"
+#powerline_symbol = ""
+    powerline_symbol = ""
 
 ## Path block
   [[blocks.segments]]
     type = "path"
-    template = "{{ .Path}}"
+    template = " {{ .Path}}"
     background = "yellow"
     foreground = "black"
-    style = "powerline"
-    powerline_symbol = ""
+    style = "accordion"
+#powerline_symbol = ""
+    powerline_symbol = ""
 ### Path block properties
     [blocks.segments.properties]
       style = "full"
@@ -52,26 +69,44 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
 ## Git block
   [[blocks.segments]]
     type = "git"
-    template = "{{ .HEAD }}<lightWhite>{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} {{if .BranchStatus }} {{ .BranchStatus }} {{ end }}</>"
+    template = " {{ .HEAD }}<lightWhite>{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}</>"
     background = "magenta"
     foreground = "black"
-    style = "powerline"
-    powerline_symbol = ""
+    style = "accordion"
+#powerline_symbol = ""
+    powerline_symbol = ""
 ### Git block properties
     [blocks.segments.properties]
       fetch_status = true
       #commit_icon = "@"
 
+# Time block
+  [[blocks.segments]]
+    type = "time"
+    template = " {{ .CurrentDate | date .Format }}"
+    style = "accordion"
+#powerline_symbol = ""
+    powerline_symbol = ""
+    foreground = "black"
+    background = "cyan"
+### Time block properties
+    [blocks.segments.properties]
+      time_format = "15:05"
+
+
+# Rprompt
+[[blocks]]
+  type = "rprompt"
+
 # executiontime block
   [[blocks.segments]]
     type = 'executiontime'
-    template = "{{ .FormattedMs }}"
-    style = 'accordion'
-    powerline_symbol = ""
-    foreground = 'black'
-    background = 'red'
+    template = " {{ .FormattedMs }}"
+    style = 'plain'
+    foreground_templates = ['{{if gt .Code 0}}red{{end}}',]
+    foreground = 'yellow'
 
-# executiontime properties
+# Executiontime properties
     [blocks.segments.properties]
       threshold = 5000
 
@@ -89,12 +124,12 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
     style = 'plain'
     foreground_templates = ['{{if gt .Code 0}}red{{end}}',]
     foreground = 'green'
-#template = '❯'
-    template = "{{ if .Root}}#{{ else }}->{{ end }}"
+    template = "{{ if .Root}}#{{ else }}❯{{ end }}"
+#template = "{{ if .Root}}#{{ else }}->{{ end }}"
 
 # Transient prompt
 #[transient_prompt]
 #  background = 'transparent'
 #  foreground = 'green' 
 #  foreground_templates = ['{{if gt .Code 0}}red{{end}}',]
-#  template = '❯ '
+#  template = "{{ if .Root}}#{{ else }}❯{{ end }}"

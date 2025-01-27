@@ -18,6 +18,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
     type = "os"
     template = ' {{.Icon}} '
     background = "black"
+    foreground_templates = ["{{ if .Root }}red{{ end }}",]
     foreground = "lightWhite"
     style = "diamond"
     leading_diamond = ""
@@ -37,7 +38,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
     type = "session"
     template = " {{ if .SSHSession }} {{ end }}{{ .UserName }}"
 #background_templates = ['{{if .Root }}red{{end}}',]
-    background = "green"
+    background = "p:orange"
     foreground = "black"
     style = "accordion"
 #powerline_symbol = ""
@@ -47,7 +48,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
   [[blocks.segments]]
     type = "session"
     template = " {{ .HostName }}"
-    background = "blue"
+    background = "yellow"
     foreground = "black"
     style = "accordion"
 #powerline_symbol = ""
@@ -57,7 +58,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
   [[blocks.segments]]
     type = "path"
     template = " {{ .Path}}"
-    background = "yellow"
+    background = "green"
     foreground = "black"
     style = "accordion"
 #powerline_symbol = ""
@@ -70,7 +71,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
   [[blocks.segments]]
     type = "git"
     template = " {{ .HEAD }}<lightWhite>{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}</>"
-    background = "magenta"
+    background = "blue"
     foreground = "black"
     style = "accordion"
 #powerline_symbol = ""
@@ -88,7 +89,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
 #powerline_symbol = ""
     powerline_symbol = ""
     foreground = "black"
-    background = "cyan"
+    background = "magenta"
 ### Time block properties
     [blocks.segments.properties]
       time_format = "15:05"

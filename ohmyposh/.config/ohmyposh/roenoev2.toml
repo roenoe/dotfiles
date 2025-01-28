@@ -91,7 +91,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
     background = "magenta"
 ### Time block properties
     [blocks.segments.properties]
-      time_format = "15:05"
+      time_format = "15:04"
 
 
 # Rprompt

@@ -29,18 +29,17 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
     background = "red"
     foreground = "lightWhite"
     style = "accordion"
-#powerline_symbol = ""
+    #powerline_symbol = ""
     powerline_symbol = ""
 
 ## Username block
   [[blocks.segments]]
     type = "session"
     template = " {{ if .SSHSession }} {{ end }}{{ .UserName }}"
-#background_templates = ['{{if .Root }}red{{end}}',]
     background = "p:orange"
     foreground = "black"
     style = "accordion"
-#powerline_symbol = ""
+    #powerline_symbol = ""
     powerline_symbol = ""
 
 ## Host block
@@ -50,7 +49,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
     background = "yellow"
     foreground = "black"
     style = "accordion"
-#powerline_symbol = ""
+    #powerline_symbol = ""
     powerline_symbol = ""
 
 ## Path block
@@ -60,7 +59,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
     background = "green"
     foreground = "black"
     style = "accordion"
-#powerline_symbol = ""
+    #powerline_symbol = ""
     powerline_symbol = ""
 ### Path block properties
     [blocks.segments.properties]
@@ -73,7 +72,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
     background = "blue"
     foreground = "black"
     style = "accordion"
-#powerline_symbol = ""
+    #powerline_symbol = ""
     powerline_symbol = ""
 ### Git block properties
     [blocks.segments.properties]
@@ -85,7 +84,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
     type = "time"
     template = " {{ .CurrentDate | date .Format }}"
     style = "accordion"
-#powerline_symbol = ""
+    #powerline_symbol = ""
     powerline_symbol = ""
     foreground = "black"
     background = "magenta"
@@ -100,11 +99,11 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
 
 # executiontime block
   [[blocks.segments]]
-    type = 'executiontime'
+    type = "executiontime"
     template = " {{ .FormattedMs }}"
-    style = 'plain'
-    foreground_templates = ['{{if gt .Code 0}}red{{end}}',]
-    foreground = 'yellow'
+    style = "plain"
+    foreground_templates = ["{{if gt .Code 0}}red{{end}}",]
+    foreground = "yellow"
 
 # Executiontime properties
     [blocks.segments.properties]
@@ -114,22 +113,21 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
 
 # Second line
 [[blocks]]
-  type = 'prompt'
-  alignment = 'left'
+  type = "prompt"
+  alignment = "left"
   newline = true
 
 # Prompt
   [[blocks.segments]]
-    type = 'text'
-    style = 'plain'
-    foreground_templates = ['{{if gt .Code 0}}red{{end}}',]
-    foreground = 'green'
+    type = "text"
+    style = "plain"
+    foreground_templates = ["{{if gt .Code 0}}red{{end}}",]
+    foreground = "green"
     template = "{{ if .Root}}#{{ else }}❯{{ end }}"
-#template = "{{ if .Root}}#{{ else }}->{{ end }}"
 
 # Transient prompt
-#[transient_prompt]
-#  background = 'transparent'
-#  foreground = 'green' 
-#  foreground_templates = ['{{if gt .Code 0}}red{{end}}',]
-#  template = "{{ if .Root}}#{{ else }}❯{{ end }}"
+[transient_prompt]
+  background = "transparent"
+  foreground = "green" 
+  foreground_templates = ["{{if gt .Code 0}}red{{end}}",]
+  template = "{{ if .Root}}#{{ else }}❯{{ end }}"

@@ -35,6 +35,9 @@ set $screenshot sh ~/.config/sway/grim.sh
 # Set wallpaper change utility
 set $changeWallpaper sh ~/.config/sway/change-wallpaper.sh
 
+# Set your preferred markdown reader
+set $markdownreader $term -e nvim
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -111,6 +114,9 @@ bindsym $mod+b exec pkill waybar || waybar
 
 # Change wallpaper
 bindsym $mod+w exec $changeWallpaper
+
+# Open help file
+bindsym $mod+F1 exec $markdownreader ~/.config/sway/hints.md
 
 # Exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+Escape exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -215,10 +221,10 @@ client.urgent $red $background $red $foreground $red
 # respectively.
 bindsym $mod+bar splith
 bindsym $mod+minus splitv
+bindsym $mod+o layout toggle split
 
 # Switch the current container between different layout styles
 bindsym $mod+t layout tabbed
-bindsym $mod+o layout toggle split
 
 # Make the current focus fullscreen
 bindsym $mod+f fullscreen

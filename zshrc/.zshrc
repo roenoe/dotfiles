@@ -61,7 +61,8 @@ fi
 alias vi=nvim           # nvim own commands
 alias vim=nvim          # nvim own commands
 alias vimdiff="nvim -d" # nvim own commands
-alias ls="ls --color -a"   # colourful ls command
+alias ls="exa --icons=always -ah --group-directories-first " # colourful ls command
+alias lsa="ls --git --total-size -l"
 alias ..="cd .."        # faster down one dir
 alias fetch="fastfetch --config ~/.config/fastfetch/autostart.jsonc"
 

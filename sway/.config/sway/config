@@ -206,13 +206,15 @@ set $magenta #d3869b
 set $cyan #8ec07c
 set $white #ebdbb2
 set $orange #d65d0e
+set $gray #928374
 
 default_border pixel 2
 default_floating_border pixel 2
 
-client.focused $orange $background $foreground $red $orange
-client.focused_inactive $white $background $foreground $white $white
-client.urgent $red $background $red $foreground $red
+#client.status $border $background $text $indicator $child-border
+client.focused $blue $background $foreground $blue $blue
+client.focused_inactive $gray $background $foreground $gray $gray
+client.urgent $red $background $foreground $red $red
 
 ### Layout stuff:
 

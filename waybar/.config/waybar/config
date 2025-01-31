@@ -42,6 +42,18 @@
       "separate-outputs": true
     },
 
+    "sway/workspaces": {
+      "persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+        "6": [],
+        "7": [],
+      },
+    },
+
     "idle_inhibitor": {
       "format": "{icon}",
       "format-icons": {
@@ -139,8 +151,8 @@
 		"menu-actions": {
 			"shutdown": "poweroff",
 			"reboot": "reboot",
-			"lock": "hyprlock",
-			"log out": "hyprctl dispatch exit"
+			"lock": "swaylock",
+			"log out": "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'"
 		}
     }
 }

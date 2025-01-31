@@ -7,6 +7,7 @@
 @define-color cyan #8ec07c;
 @define-color white #ebdbb2;
 @define-color orange #d65d0e;
+@define-color gray #928374;
 
 @define-color foreground #ebdbb2;
 @define-color lightred #fb4934;
@@ -17,3 +18,4 @@
 @define-color lightcyan #689d6a;
 @define-color lightwhite #a89984;
 @define-color lightorange #fe8019;
+@define-color lightgray #a89984;

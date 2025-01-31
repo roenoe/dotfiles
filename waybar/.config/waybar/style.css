@@ -22,30 +22,38 @@ window#waybar {
 }
 
 button {
-    border: none;
-    border-radius: 0;
-    color: @foreground;
-    min-width: 0;
-    padding: 10;
+  border: none;
+  border-radius: 0;
+  color: @foreground;
+  min-width: 0;
+  padding: 10;
 }
 
 button:hover {
-    background: inherit;
-    color: @orange;
+  background: inherit;
+  color: @orange;
 }
 
 #workspaces button.active {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: @orange;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: @orange;
 }
 
 #workspaces button.focused {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: @orange;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: @orange;
 }
 
 #workspaces button.urgent {
-    background-color: @red;
+  background-color: @red;
+}
+
+#workspaces button.persistent {
+  color: @gray;
+}
+
+#workspaces button.persistent:hover {
+  color: @orange;
 }
 
 #pulseaudio,
@@ -71,24 +79,20 @@ button:hover {
 }
 
 #clock {
-    color: @green;
-    border-bottom: 2px solid @green;
+  color: @green;
 }
 
 #pulseaudio {
-    color: @magenta;
-    border-bottom: 2px solid @magenta;
+  color: @magenta;
 }
 
 #network {
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
+  color: @yellow;
 }
 
 #mode,
 #battery {
-    color: @lightred;
-    border-bottom: 2px solid @lightred;
+  color: @lightred;
 }
 
 #window {

@@ -25,6 +25,7 @@
 * zsh
 * fzf
 * unzip
+* eza (or exa)
 ### Other tools
 * fastfetch
 * tmux

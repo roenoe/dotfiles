@@ -21,7 +21,7 @@ zinit cdreplay -q
 bindkey "^[[1;5C" forward-word	# ctrl + right arrow
 bindkey "^[[1;5D" backward-word	# ctrl + left arrow
 bindkey "^[[3~" delete-char	# del key
-bindkey -e  # emacs in vim?
+bindkey -e  # emacs in prompt
 
 # History
 HISTSIZE=5000

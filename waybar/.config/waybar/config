@@ -8,12 +8,13 @@
     // Choose the order of the modules
     "modules-left": [
         "sway/workspaces",
-        "sway/mode",
-        "sway/window",
         "hyprland/workspaces",
+        "wlr/taskbar",
+        "sway/window",
         "hyprland/window"
     ],
     "modules-center": [
+        "sway/mode",
         "clock",
     ],
     "modules-right": [
@@ -32,6 +33,18 @@
       //"all-outputs": true,
       "on-scroll-up": "hyprctl dispatch workspace +1",
       "on-scroll-down": "hyprctl dispatch workspace -1",
+    },
+
+    "wlr/taskbar": {
+      "format": "{icon}",
+      "icon-size": 14,
+      "icon-theme": "Numix-Circle",
+      "tooltip-format": "{title}",
+      "on-click": "activate",
+      "on-click-middle": "close",
+      "rewrite": {
+        "Firefox Web Browser": "Firefox",
+      }
     },
 
     "hyprland/window": {
@@ -66,8 +79,10 @@
       // "icon-size": 21,
       "spacing": 10
     },
+
     "clock": {
-      "format": "󰸘 {0:%Y-%m-%d}  {0:%H:%M:%S}",
+      //"format": "󰸘 {0:%Y-%m-%d}  {0:%H:%M:%S}",
+      "format": "󰸘 {0:%d.%m.%Y}  {0:%H:%M:%S}",
       "interval": 1,
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     },
@@ -78,7 +93,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
+        "format": "{icon} {capacity}%",
         "format-full": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
@@ -104,21 +119,21 @@
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "tooltip-format": " {ifname} via {gwaddr}",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": "⚠ Disconnected",
         "on-click": "nm-connection-editor"
     },
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-source": "",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",

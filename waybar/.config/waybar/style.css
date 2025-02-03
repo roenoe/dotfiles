@@ -48,11 +48,11 @@ button:hover {
   background-color: @red;
 }
 
-#workspaces button.persistent {
+#workspaces button.empty {
   color: @gray;
 }
 
-#workspaces button.persistent:hover {
+#workspaces button.empty:hover {
   color: @orange;
 }
 

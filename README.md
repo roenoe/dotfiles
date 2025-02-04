@@ -33,11 +33,33 @@
 * [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 * neovim
 
-# This file is outdated!!!
+## Installation of dependencies
 
-## Automatic installation
-This includes everything from my dotfiles, including the optional stuff\
-First install all the Dependencies
+### For Arch linux (and derivatives)
+
+#### Prompt
+`sudo pacman -S zsh fzf eza unzip`\
+Oh My Posh:\
+`mkdir -p ~/.local/bin`\
+`curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin`\
+
+#### Other CLI tools
+`sudo pacman -S tmux entr neovim fastfetch`\
+Tmux Plugin Manager:\
+`git clone https://github.com/tmux-plugins/tpm ~/.local/share/tmux/plugins/tpm`
+
+#### All the terminals
+`sudo pacman -S --needed alacritty ghostty kitty`
+
+#### Hyprland
+`sudo pacman -S --needed hyprland hypridle hyprlock hyprpaper fuzzel waybar`
+`yay -S --needed hyprshot`
+
+#### Sway
+`sudo pacman -S sway swaybg swayidle swaylock grim slurp`
+
+
+# THIS FILE IS OUTDATED
 
 ### For Arch
 `sudo pacman -S --needed git zsh tmux kitty fzf neovim entr ttf-jetbrains-mono-nerd git curl`

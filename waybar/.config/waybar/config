@@ -21,9 +21,9 @@
         "tray",
         "network",
         "pulseaudio",
-        "power-profiles-daemon",
         "battery",
         "battery#bat2",
+        "power-profiles-daemon",
         "custom/power"
     ],
 
@@ -37,6 +37,7 @@
 
     "wlr/taskbar": {
       "format": "{icon}",
+      "all-outputs": "false",
       "icon-size": 20,
       "icon-theme": "Numix-Circle",
       "tooltip-format": "{title}",
@@ -110,10 +111,10 @@
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": true,
       "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
+        "default": " ",
+        "performance": " ",
+        "balanced": " ",
+        "power-saver": " "
       }
     },
 

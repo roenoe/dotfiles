@@ -24,11 +24,11 @@ Tmux Plugin Manager:\
 `sudo pacman -S --needed alacritty ghostty kitty`
 
 #### Hyprland
-`sudo pacman -S --needed hyprland hypridle hyprlock hyprpaper fuzzel waybar`\
+`sudo pacman -S --needed hyprland hypridle hyprlock hyprpaper fuzzel waybar nm-connection-editor network-manager-applet`\
 `yay -S --needed hyprshot`
 
 #### Sway
-`sudo pacman -S sway swaybg swayidle swaylock grim slurp`
+`sudo pacman -S --needed sway swaybg swayidle swaylock grim slurp waybar nm-connection-editor network-manager-applet`
 
 
 # THIS FILE IS OUTDATED
@@ -91,6 +91,8 @@ See [this](https://www.reddit.com/r/openSUSE/comments/16v0vk7/comment/k30mxyr/)
 ### Window Managers
 * fuzzel // wofi
 * waybar
+* nm-connection-editor
+* network-manager-applet
 #### Hyprland
 * hyprland
 * hypridle

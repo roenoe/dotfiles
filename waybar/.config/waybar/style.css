@@ -3,9 +3,9 @@
 * {
   font-family: "Maple Mono", "JetBrains MonoNL", "JetBrains Mono", "JetBrainsMono Nerd Font", "CaskaydiaCove Nerd Font", "Source Code Pro";
   font-size: 16px;
-  min-height: 0;
-  padding: 0;
-  margin: -1;
+  min-height: 0px;
+  padding: 0px;
+  margin: -1px;
 }
 
 window#waybar {
@@ -17,16 +17,16 @@ window#waybar {
 
 #window {
   margin: 8px;
-  padding-left: 8;
-  padding-right: 8;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 button {
   border: none;
-  border-radius: 0;
+  border-radius: 0px;
   color: @foreground;
-  min-width: 0;
-  padding: 10;
+  min-width: 0px;
+  padding: 10px;
 }
 
 button:hover {

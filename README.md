@@ -5,23 +5,29 @@
 
 ### For Arch linux (and derivatives)
 These packages are always needed, no matter what you plan on installing:\
-`sudo pacman -S --needed git wget curl ttf-jetbrains-mono-nerd`
+`sudo pacman -S --needed git wget curl`
 
 #### Prompt
-`sudo pacman -S --needed zsh fzf eza unzip`\
+`sudo pacman -S --needed zsh fzf eza unzip`
+
 Oh My Posh:\
 `mkdir -p ~/.local/bin`\
-`curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin`\
+`curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin`
+
 Change default shell to zsh:\
 `chsh -S $(which zsh)`
 
 #### Other CLI tools
-`sudo pacman -S tmux entr neovim fastfetch`\
+`sudo pacman -S tmux entr neovim fastfetch`
+
 Tmux Plugin Manager:\
 `git clone https://github.com/tmux-plugins/tpm ~/.local/share/tmux/plugins/tpm`
 
 #### All the terminals
-`sudo pacman -S --needed alacritty ghostty kitty`
+`sudo pacman -S --needed alacritty ghostty kitty ttf-jetbrains-mono-nerd`
+
+Maple-mono font\
+`yay -S --needed ttf-maple`
 
 #### Hyprland
 `sudo pacman -S --needed hyprland hypridle hyprlock hyprpaper fuzzel waybar nm-connection-editor network-manager-applet`\
@@ -30,24 +36,46 @@ Tmux Plugin Manager:\
 #### Sway
 `sudo pacman -S --needed sway swaybg swayidle swaylock grim slurp waybar nm-connection-editor network-manager-applet`
 
+### For Debian (some stuff might not exist in bookworm/12)
+These packages are always needed, no matter what you plan on installing:\
+`sudo apt install sudo wget git curl`
 
-# THIS FILE IS OUTDATED
+#### Prompt
+`sudo apt install zsh fzf eza unzip`
 
-### For Arch
-`sudo pacman -S --needed git zsh tmux kitty fzf neovim entr ttf-jetbrains-mono-nerd git curl`
+#### Other CLI tools
+`sudo apt install tmux entr neovim fastfetch`
 
-### For Debian
-`sudo apt install git zsh tmux kitty fzf neovim entr git curl`
-
-### For all distros
-Oh My Posh:\
-`mkdir -p ~/.local/bin`\
-`curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin`\
 Tmux Plugin Manager:\
 `git clone https://github.com/tmux-plugins/tpm ~/.local/share/tmux/plugins/tpm`
 
-### Changing shell to zsh
-`chsh -s $(which zsh)`
+Oh My Posh:\
+`mkdir -p ~/.local/bin`\
+`curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin`
+
+Change default shell to zsh:\
+`chsh -S $(which zsh)`
+
+#### All the terminals
+`sudo apt install kitty alacritty fonts-jetbrains-mono`
+
+Ghostty:\
+`source /etc/os-release
+ARCH=$(dpkg --print-architecture)
+GHOSTTY_DEB_URL=$(
+   curl -s https://api.github.com/repos/mkasberg/ghostty-ubuntu/releases/latest | \
+   grep -oP "https://github.com/mkasberg/ghostty-ubuntu/releases/download/[^\s/]+/ghostty_[^\s/_]+_${ARCH}_${VERSION_ID}.deb"
+)
+GHOSTTY_DEB_FILE=$(basename "$GHOSTTY_DEB_URL")
+curl -LO "$GHOSTTY_DEB_URL"
+sudo dpkg -i "$GHOSTTY_DEB_FILE"
+rm "$GHOSTTY_DEB_FILE"`
+
+#### Sway
+`sudo apt install sway swaybg swayidle swaylock grim slurp waybar nm-connection-editor network-manager-applet`
+
+#### Hyprland
+Not really reccommended. If you really want to install it anyway, the dependencies you will need are `hyprland hypridle hyprlock hyprpaper hyprshot`. Most of these are not in the repos.
 
 ## Extra steps for stuff
 These are some extra steps for installing different optional parts of my dotfiles

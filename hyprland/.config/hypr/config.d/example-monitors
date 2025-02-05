@@ -12,13 +12,13 @@ monitor = DP-2, 2560x1440, 3840x-300, 1, transform, 1
 monitor = DP-1, 2560x1440, -2560x360, 1
 
 # Workspaces
-workspace = 1, monitor:DP-3, default:true
-workspace = 2, monitor:DP-3 
-workspace = 3, monitor:DP-3 
-workspace = 4, monitor:DP-3 
-workspace = 5, monitor:DP-3 
-workspace = 6, monitor:DP-3 
-workspace = 7, monitor:DP-3 
+workspace = 1, monitor:DP-3, persistent:true, default:true
+workspace = 2, monitor:DP-3, persistent:true 
+workspace = 3, monitor:DP-3, persistent:true 
+workspace = 4, monitor:DP-3, persistent:true 
+workspace = 5, monitor:DP-3, persistent:true 
+workspace = 6, monitor:DP-3, persistent:true 
+workspace = 7, monitor:DP-3, persistent:true 
 
 # To disable a monitor
 #monitor = [NAME],disable

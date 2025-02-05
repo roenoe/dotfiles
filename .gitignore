@@ -1,6 +1,5 @@
 # Ignore monitors.conf
-hyprland/.config/hypr/monitors.conf
-sway/.config/sway/monitors.conf
+monitors.conf
 
 # Ignore lazylock
 nvim/.config/nvim/lazy-lock.json

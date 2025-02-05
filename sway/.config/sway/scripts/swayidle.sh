@@ -3,7 +3,7 @@
 #LOCKUTIL=hyprlock
 LOCKUTIL=swaylock
 #LOCK="pidof hyprlock || hyprlock"
-LOCK="pidof swaylock || sh ~/.config/sway/swaylock.sh"
+LOCK="pidof swaylock || sh ~/.config/sway/scripts/swaylock.sh"
 SLEEP="pidof $LOCKUTIL && (hyprctl dispatch dpms off || swaymsg 'output * dpms off')"
 UNSLEEP="hyprctl dispatch dpms on || swaymsg 'output * dpms on'"
 

@@ -11,7 +11,7 @@ Super + Return
 ### Kill active window
 Super + Q
 
-### Open lanch menu (fuzzel
+### Open lanch menu (fuzzel)
 Super
 
 ### Reload configuration file

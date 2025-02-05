@@ -5,9 +5,9 @@
 
 ### For Arch linux (and derivatives)
 These packages are always needed, no matter what you plan on installing:\
-`sudo pacman -S --needed git wget curl`
+`sudo pacman -S --needed git wget curl stow`
 
-#### Prompt
+#### Prompt & shell
 `sudo pacman -S --needed zsh fzf eza unzip`
 
 Oh My Posh:\
@@ -34,13 +34,13 @@ Maple-mono font\
 `yay -S --needed hyprshot`
 
 #### Sway
-`sudo pacman -S --needed sway swaybg swayidle swaylock grim slurp waybar nm-connection-editor network-manager-applet`
+`sudo pacman -S --needed sway swaybg swayidle swaylock grim slurp waybar nm-connection-editor network-manager-applet fuzzel`
 
 ### For Debian (some stuff might not exist in bookworm/12)
 These packages are always needed, no matter what you plan on installing:\
-`sudo apt install sudo wget git curl`
+`sudo apt install sudo wget git curl stow`
 
-#### Prompt
+#### Prompt & shell
 `sudo apt install zsh fzf eza unzip`
 
 #### Other CLI tools
@@ -72,10 +72,10 @@ sudo dpkg -i "$GHOSTTY_DEB_FILE"
 rm "$GHOSTTY_DEB_FILE"`
 
 #### Sway
-`sudo apt install sway swaybg swayidle swaylock grim slurp waybar nm-connection-editor network-manager-applet`
+`sudo apt install sway swaybg swayidle swaylock grim slurp waybar nm-connection-editor network-manager-applet fuzzel`
 
 #### Hyprland
-Not really reccommended. If you really want to install it anyway, the dependencies you will need are `hyprland hypridle hyprlock hyprpaper hyprshot`. Most of these are not in the repos.
+Not really reccommended. If you really want to install it anyway, the dependencies you will need are `hyprland hypridle hyprlock hyprpaper hyprshot waybar nm-connection-editor network-manager-applet fuzzel`. Some of these are not in the repos.
 
 ## Extra steps for stuff
 These are some extra steps for installing different optional parts of my dotfiles
@@ -132,7 +132,7 @@ See [this](https://www.reddit.com/r/openSUSE/comments/16v0vk7/comment/k30mxyr/)
 * swaybg
 * sway*\idle+lock // hypr*idle+lock
 * SCREENSHOT UTIL
-### Prompt
+### Prompt & shell
 * [Oh My Posh](https://ohmyposh.dev/docs/installation/linux)
 * zsh
 * fzf

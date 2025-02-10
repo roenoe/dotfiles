@@ -15,7 +15,7 @@ Oh My Posh:\
 `curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin`
 
 Change default shell to zsh:\
-`chsh -S $(which zsh)`
+`chsh -s $(which zsh)`
 
 #### Other CLI tools
 `sudo pacman -S tmux entr neovim fastfetch`
@@ -54,7 +54,7 @@ Oh My Posh:\
 `curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin`
 
 Change default shell to zsh:\
-`chsh -S $(which zsh)`
+`chsh -s $(which zsh)`
 
 #### All the terminals
 `sudo apt install kitty alacritty fonts-jetbrains-mono`

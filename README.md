@@ -82,7 +82,7 @@ These are some extra steps for installing different optional parts of my dotfile
 
 ### WM and waybar and stuff
 Make sure to configure your monitors by copying `example-monitors.conf` into `monitors.conf` in your `~/.config/hypr` or `~/.config/sway` respectively, and then editing it.\
-If you're using sway, make sure to edit `~/.config/waybar/config` and change the monitor name of your primary monitor on the lines where it mentions a monitor in `persistent-workspaces`
+If you're using sway, make sure to edit `~/.config/waybar/config.jsonc` and change the monitor name of your primary monitor on the lines where it mentions a monitor in `persistent-workspaces`
 
 ### Correct nerd font in gnome-terminal
 First install the correct font\

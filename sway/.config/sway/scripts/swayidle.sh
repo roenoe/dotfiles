@@ -8,7 +8,7 @@ SLEEP="pidof $LOCKUTIL && (hyprctl dispatch dpms off || swaymsg 'output * dpms o
 UNSLEEP="hyprctl dispatch dpms on || swaymsg 'output * dpms on'"
 
 swayidle -w \
-  timeout 5 "$SLEEP" \
+  timeout 10 "$SLEEP" \
   resume "$UNSLEEP" \
   \
   timeout 570 "notify-send 'Your display is about to go to sleep'" \

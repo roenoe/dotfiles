@@ -208,7 +208,7 @@ default_border pixel 2
 default_floating_border pixel 2
 
 #client.status $border $background $text $indicator $child-border
-client.focused $blue $background $foreground $blue $blue
+client.focused $blue $background $foreground $cyan $blue
 client.focused_inactive $gray $background $foreground $gray $gray
 client.urgent $red $background $foreground $red $red
 

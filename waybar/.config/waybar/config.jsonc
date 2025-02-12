@@ -18,11 +18,11 @@
   ],
   "modules-right": [
     "tray",
-    "network",
     "pulseaudio",
+    "network",
+    "power-profiles-daemon",
     "battery",
     "battery#bat2",
-    "power-profiles-daemon",
     "custom/power"
   ],
   // Modules configuration
@@ -33,24 +33,30 @@
     "on-scroll-down": "hyprctl dispatch workspace -1"
   },
   "wlr/taskbar": {
-    "format": "{icon}",
+    "format": "{icon} {title:.30}",
     "all-outputs": "false",
     "icon-size": 20,
     "icon-theme": "Numix-Circle",
     "tooltip-format": "{title}",
-    "on-click": "activate",
-    "on-click-middle": "close",
+    "on-click": "",
+    "on-click-middle": "",
     "rewrite": {
       "Firefox Web Browser": "Firefox"
     }
   },
   "hyprland/window": {
-    "separate-outputs": true
+    "separate-outputs": true,
+    "icon": true,
+    "icon-size": 20
   },
   "sway/window": {
-    "separate-outputs": true
+    "separate-outputs": true,
+    "icon": true,
+    "icon-size": 20
   },
   "sway/workspaces": {
+    "disable-scroll-wraparound": true,
+    "warp-on-scroll": false,
     "persistent-workspaces": {
       "1": [
         "DP-3"

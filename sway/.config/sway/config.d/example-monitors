@@ -8,9 +8,10 @@
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-output DP-3 resolution 3840x2160@120Hz position 0,0
-output DP-2 resolution 2560x1440 position 3840,-300 transform 270
-output DP-1 resolution 2560x1440 position -2560,360
+# IMPORTANT!: Don't use negative numbers for any of your monitors. This will break xwayland windows in those places.
+output DP-3 resolution 3840x2160@120Hz position 2560,300
+output DP-2 resolution 2560x1440 position 6400,0 transform 270
+output DP-1 resolution 2560x1440 position 0,660
 
 # Workspaces
 # See `man 5 sway`

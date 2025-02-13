@@ -98,8 +98,13 @@ So simply open a tmux session with `tmux` and then press `ctrl+b I`
 I recommend changing the font kitty uses to JetBrains or Fira Code. To do so, simply edit `~/.config/kitty/kitty.conf` and uncomment the font you want to use. Make sure to also comment the font it uses by default (if that's not your preferred font)
 
 ## FAQ
+
+### Discord won't launch
+FIX: Disable hardware acceleration in settings -> advanced.
+This is a bug in discord/electron in wayland.
+
 ### Zsh complains about "unknown option: --zsh"
-This means you don't have a new enough version of fzf. To fix this error, simply comment the line that says `eval "$(fzf --zsh)"` in your `~/.zshrc` file
+This means you don't have a new enough version of fzf. To fix this error, simply comment the line that says `eval "$(fzf --zsh)"` in your `~/.zshrc` file.
 
 ### Neovim complains about "lazy.nvim requires Neovim >= 0.8.0"
 This means your Neovim version is old.
@@ -110,7 +115,7 @@ See [this](https://www.lorenzobettini.it/2023/09/hyprland-and-ssh-agent/)
 ### Broken xdg-desktop-portal
 See [this](https://www.reddit.com/r/openSUSE/comments/16v0vk7/comment/k30mxyr/)
 
-# List of dependencies
+## List of dependencies
 * Stow
 ### Different terminal options
 * Alacritty

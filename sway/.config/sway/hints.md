@@ -70,3 +70,7 @@ Super + F
 
 ### Toggle floating window
 Super + Shift + F
+
+### Switch focus between floating and tiled windows
+Super + Tab
+

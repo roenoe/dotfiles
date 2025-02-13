@@ -93,7 +93,8 @@ bindsym $mod+Return exec $term
 bindsym $mod+q kill
 
 # Start your launcher
-bindsym --release Super_L exec pkill $menu || $menu
+bindsym  Super_L exec pkill $menu
+bindsym $mod+Space exec pkill $menu || $menu
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.

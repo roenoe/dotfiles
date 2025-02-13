@@ -73,6 +73,10 @@ input type:touchpad {
   middle_emulation enabled
 }
 
+bindgesture {
+  swipe:right workspace prev
+  swipe:left workspace next
+}
 input * {
   xkb_layout "no"
   repeat_rate 50
@@ -232,7 +236,7 @@ bindsym $mod+f fullscreen
 bindsym $mod+Shift+f floating toggle
 
 # Swap focus between the tiling area and the floating area
-#bindsym $mod+space focus mode_toggle
+bindsym $mod+Tab focus mode_toggle
 
 # Move focus to the parent container
 bindsym $mod+a focus parent
@@ -271,6 +275,7 @@ mode "resize" {
   # Return to default mode
   bindsym Return mode "default"
   bindsym Escape mode "default"
+  bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
 

@@ -65,7 +65,7 @@ alias ls="exa --icons=always -ah --group-directories-first " # colourful ls comm
 alias ll="ls -l --git"
 alias lsa="ls -l --total-size"
 alias ..="cd .."        # faster down one dir
-alias fetch="fastfetch --config ~/.config/fastfetch/autostart.jsonc"
+alias fetch="fastfetch --config ~/.config/fastfetch/autostart.jsonc --logo-color-2 blue"
 
 # Shell integrations
 eval "$(fzf --zsh)"

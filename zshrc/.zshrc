@@ -62,10 +62,11 @@ alias vi=nvim           # nvim own commands
 alias vim=nvim          # nvim own commands
 alias vimdiff="nvim -d" # nvim own commands
 alias ls="exa --icons=always -ah --group-directories-first " # colourful ls command
-alias ll="ls -l --git"
-alias lsa="ls -l --total-size"
+alias ll="ls -l --git"  # ls with -l
+alias lsa="ls -l --total-size"  # show all sizes of files
 alias ..="cd .."        # faster down one dir
-alias fetch="fastfetch --config ~/.config/fastfetch/autostart.jsonc --logo-color-2 blue"
+alias fetch="fastfetch --config ~/.config/fastfetch/autostart.jsonc --logo-color-2 blue"  # small fetch command to run at shell startup
+alias rg="rg --hidden"  # grep through hidden files too
 
 # Shell integrations
 eval "$(fzf --zsh)"

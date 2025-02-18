@@ -217,6 +217,21 @@ require('lazy').setup({
     },
   },
 
+  { -- File tree
+    'nvim-tree/nvim-tree.lua',
+    version = '*',
+    lazy = false,
+    dependencies = {
+      'nvim-tree/nvim-web-devicons',
+    },
+    keys = { -- load the plugin only when using it's keybinding:
+      { '<leader>f', '<cmd>NvimTreeToggle<cr>' },
+    },
+    config = function()
+      require('nvim-tree').setup {}
+    end,
+  },
+
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'

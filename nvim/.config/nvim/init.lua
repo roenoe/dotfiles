@@ -225,7 +225,7 @@ require('lazy').setup({
       'nvim-tree/nvim-web-devicons',
     },
     keys = { -- load the plugin only when using it's keybinding:
-      { '<leader>f', '<cmd>NvimTreeToggle<cr>' },
+      { '<leader>F', '<cmd>NvimTreeToggle<cr>' },
     },
     config = function()
       require('nvim-tree').setup {}

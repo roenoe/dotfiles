@@ -6,12 +6,15 @@ gtk-tabs-location = top
 #gtk-toolbar-style = raised
 
 # Fonts
-font-family = "Maple Mono"
+font-family = "Maple Mono NF"
 font-size = 13
 
 # Colours
 theme = GruvboxDarkHard
-background-opacity = 0.8
+background-opacity = 1.0
+palette = 0=#1b1b1b
+background = #1b1b1b
+cursor-text = #1b1b1b
 
 # Keybinds
 keybind = ctrl+shift+f5=reload_config

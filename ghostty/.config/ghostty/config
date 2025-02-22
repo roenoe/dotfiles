@@ -6,7 +6,7 @@ gtk-tabs-location = top
 #gtk-toolbar-style = raised
 
 # Fonts
-font-family = "Maple Mono NF"
+font-family = "Maple Mono"
 font-size = 13
 
 # Colours

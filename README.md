@@ -81,8 +81,12 @@ Not really reccommended. If you really want to install it anyway, the dependenci
 These are some extra steps for installing different optional parts of my dotfiles
 
 ### WM and waybar and stuff
-Make sure to configure your monitors by copying `example-monitors.conf` into `monitors.conf` in your `~/.config/hypr` or `~/.config/sway` respectively, and then editing it.\
+Make sure to configure your monitors by copying `example-monitors` into `monitors.conf` in your `~/.config/hypr/config.d/` or `~/.config/sway/config.d/` respectively, and then editing it.\
 If you're using sway, make sure to edit `~/.config/waybar/config.jsonc` and change the monitor name of your primary monitor on the lines where it mentions a monitor in `persistent-workspaces`
+
+If you're planning on screenshotting stuff, whether that be with hyprshot (Hyprland) or with grim+slurp (sway), you need to make a screenshot folder. Do that with `mkdir -p ~/Pictures/screenshots`\
+If you want some other wallpaper than a black screen, you can put whatever images you want in your wallpaper folder. To make one, do `mkdir -p ~/Pictures/wallpaper/`\
+I have som wallpapers available [this google drive folder](https://drive.google.com/drive/folders/15ALGCKmm9kK1I67v8c1eSb1FbDeX9vVZ?usp=sharing)
 
 ### Correct nerd font in gnome-terminal
 First install the correct font\

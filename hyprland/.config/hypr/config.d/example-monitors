@@ -1,25 +1,24 @@
 # This is an example of how you can manage your monitors. Copy this file to ./monitors.conf to use it.
 
 # https://wiki.hyprland.org/Configuring/Monitors 
-
-# Monitors
-monitor=,preferred,auto,1
+# See `hyprctl monitors` for monitor names and capabilities
 
 # Examples
-#monitor = [NAME], [RESOLUTION]@[FRAMERATE], [POSITION], [SCALE], [ROTATION]
+#monitor = [NAME], [RESOLUTION]@[FRAMERATE], [POSITION], [SCALE], transform, [0|1|2|3]
+
 # I reccommend not using negative numbers, as that can mess with X11 windows running under xwayland
-monitor = DP-3, 3840x2160@120, 2560x300, 1
-monitor = DP-2, 2560x1440, 6400x0, 1, transform, 1
-monitor = DP-1, 2560x1440, 0x660, 1
+#monitor = DP-1, 3840x2160@120, 1440x300, 1
+#monitor = DP-2, 2560x1440, 0x0, 1, transform, 1
+#monitor = DP-3, 2560x1440, 5280x0, 1, transform, 1
 
 # Workspaces
-workspace = 1, monitor:DP-3, persistent:true, default:true
-workspace = 2, monitor:DP-3, persistent:true 
-workspace = 3, monitor:DP-3, persistent:true 
-workspace = 4, monitor:DP-3, persistent:true 
-workspace = 5, monitor:DP-3, persistent:true 
-workspace = 6, monitor:DP-3, persistent:true 
-workspace = 7, monitor:DP-3, persistent:true 
+workspace = 1, monitor:DP-1, persistent:true, default:true
+workspace = 2, monitor:DP-1, persistent:true 
+workspace = 3, monitor:DP-1, persistent:true 
+workspace = 4, monitor:DP-1, persistent:true 
+workspace = 5, monitor:DP-1, persistent:true 
+workspace = 6, monitor:DP-1, persistent:true 
+workspace = 7, monitor:DP-1, persistent:true 
 
 # To disable a monitor
 #monitor = [NAME],disable

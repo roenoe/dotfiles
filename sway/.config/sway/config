@@ -26,7 +26,9 @@ set $idle sh ~/.config/sway/scripts/swayidle.sh
 set $term kitty
 
 # Your preferred application launcher
-set $menu fuzzel --list-executables-in-path
+set $menu fuzzel
+# Set its flags for running
+set $menuFlags --list-executables-in-path
 
 # Set your preferred screenshot tool
 #set $screenshot hyprshot -m region
@@ -98,7 +100,7 @@ bindsym $mod+q kill
 
 # Start your launcher
 bindsym --no-repeat Super_L exec pkill $menu
-bindsym --no-repeat $mod+Space exec pkill $menu || $menu
+bindsym --no-repeat $mod+Space exec pkill $menu || $menu $menuFlags
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.

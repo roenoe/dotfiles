@@ -67,6 +67,7 @@ alias lsa="ls -l --total-size"  # show all sizes of files
 alias ..="cd .."        # faster down one dir
 alias fetch="fastfetch --config ~/.config/fastfetch/autostart.jsonc --logo-color-2 blue"  # small fetch command to run at shell startup
 alias rg="rg --hidden"  # grep through hidden files too
+alias cat="bat"  # better way to view files
 
 # Shell integrations
 eval "$(fzf --zsh)"

@@ -18,10 +18,10 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # Keybindings
+bindkey -e  # emacs in prompt MUST BE ABOVE OTHER KEYBINDS FOR TMUX
 bindkey "^[[1;5C" forward-word	# ctrl + right arrow
 bindkey "^[[1;5D" backward-word	# ctrl + left arrow
 bindkey "^[[3~" delete-char	# del key
-bindkey -e  # emacs in prompt
 
 # History
 HISTSIZE=5000

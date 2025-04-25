@@ -22,6 +22,14 @@ bindkey -e  # emacs in prompt MUST BE ABOVE OTHER KEYBINDS FOR TMUX
 bindkey "^[[1;5C" forward-word	# ctrl + right arrow
 bindkey "^[[1;5D" backward-word	# ctrl + left arrow
 bindkey "^[[3~" delete-char	# del key
+# Exc + backspace bash parity
+backward-kill-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle backward-kill-word
+    zle -f kill
+}
+zle -N backward-kill-dir
+bindkey '^[^?' backward-kill-dir
 
 # History
 HISTSIZE=5000
@@ -71,15 +79,6 @@ alias cat="bat"  # better way to view files
 
 # Shell integrations
 eval "$(fzf --zsh)"
-
-# Exc + backspace bash parity
-backward-kill-dir () {
-    local WORDCHARS=${WORDCHARS/\/}
-    zle backward-kill-word
-    zle -f kill
-}
-zle -N backward-kill-dir
-bindkey '^[^?' backward-kill-dir
 
 fetch
 

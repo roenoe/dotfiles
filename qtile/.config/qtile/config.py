@@ -143,10 +143,14 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
+    layout.Columns(
+        border_focus_stack=["#d75f5f", "#8f3d3d"],
+        border_width=4,
+        num_columns=3,
+    ),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
-    # layout.Stack(num_stacks=2),
+    # layout.Stack(num_stacks=3),
     # layout.Bsp(),
     # layout.Matrix(),
     # layout.MonadTall(),
@@ -211,10 +215,10 @@ mouse = [
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list
-follow_mouse_focus = True
+follow_mouse_focus = False
 bring_front_click = False
 floats_kept_above = True
-cursor_warp = False
+cursor_warp = True
 floating_layout = layout.Floating(
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
@@ -241,6 +245,8 @@ auto_minimize = True
 # }
 
 wl_input_rules = {
+    "*": InputConfig(
+    ),
     "type:keyboard": InputConfig(
         kb_repeat_delay=300,
         kb_repeat_rate=50,
@@ -250,7 +256,6 @@ wl_input_rules = {
         natural_scroll=True,
         tap=True,
         middle_emulation=True,
-
     )
 }
 

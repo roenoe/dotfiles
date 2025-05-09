@@ -4,3 +4,5 @@ monitors.conf
 # Ignore lazylock
 nvim/.config/nvim/lazy-lock.json
 
+# Ignore pycache for qtile
+__pycache__

@@ -1,0 +1,28 @@
+console_title_template = "{{ if .Root }} root@{{ end }}{{ .HostName }} {{ .PWD }}"
+final_space = true
+version = 3
+enable_cursor_positioning = true                                                   # if you have issues with your prompt taking a while to start, disable this
+
+# Palette
+[palette]
+orange = "#d65d0e"
+cisBlack = "#1b1b1a"
+
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+newline = true
+
+[[blocks.segments]]
+type = "text"
+style = "plain"
+foreground_templates = []
+template = "->"
+
+# Transient prompt
+[transient_prompt]
+background = "transparent"
+foreground = "green"
+foreground_templates = ["{{if gt .Code 0}}red{{end}}"]
+template = "{{ if .Root}}#{{ else }}->{{ end }}"

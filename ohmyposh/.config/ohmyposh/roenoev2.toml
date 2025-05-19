@@ -130,4 +130,4 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
   background = "transparent"
   foreground = "green" 
   foreground_templates = ["{{if gt .Code 0}}red{{end}}",]
-  template = "{{ if .Root}}#{{ else }}❯{{ end }}"
+  template = "{{ if .Root}}#{{ else }}❯{{ end }} "

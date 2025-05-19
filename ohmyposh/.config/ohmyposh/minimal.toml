@@ -1,0 +1,84 @@
+console_title_template = "{{ .UserName }}@{{ .HostName }} {{ .PWD }}"
+final_space = true
+version = 3
+enable_cursor_positioning = true                                                   # if you have issues with your prompt taking a while to start, disable this
+
+# Top block
+[[blocks]]
+type = "prompt"
+alignment = "left"
+newline = true
+
+## Username@host
+[[blocks.segments]]
+type = "session"
+style = "plain"
+background = "transparent"
+foreground = "green"
+template = "{{ if .SSHSession }}<default>\ueba9 </>{{ end }}{{ .UserName }}<red>@</><blue>{{ .HostName }}</><default>:</>"
+
+## Path
+[[blocks.segments]]
+type = "path"
+style = "plain"
+background = "transparent"
+foreground = "yellow"
+template = "{{ .Path }}"
+[blocks.segments.properties]
+style = "full"
+
+## Git block
+[[blocks.segments]]
+type = "git"
+template = " {{ .HEAD }}<default>{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}</>{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}"
+background = "transparent"
+foreground = "cyan"
+style = "plain"
+[blocks.segments.properties]
+fetch_status = true
+
+## Executiontime
+[[blocks.segments]]
+type = "executiontime"
+style = "plain"
+foreground_templates = ["{{if gt .Code 0}}red{{end}}"]
+background = "transparent"
+foreground = "magenta"
+template = "<default> took </>{{ .FormattedMs }}"
+[blocks.segments.properties]
+threshold = 5000
+style = "round"
+
+
+
+# Bottom block
+[[blocks]]
+type = "prompt"
+alignment = "left"
+newline = true
+
+## Prompt
+[[blocks.segments]]
+type = "text"
+style = "plain"
+foreground_templates = ["{{if gt .Code 0}}red{{end}}"]
+background = "transparent"
+foreground = "magenta"
+template = "->"
+
+
+
+# Transient prompt
+[transient_prompt]
+background = "transparent"
+foreground = "magenta"
+foreground_templates = ["{{if gt .Code 0}}red{{end}}"]
+template = "{{ if .Root}}#{{ else }}->{{ end }} "
+
+
+
+# Multiple line prompt
+[secondary_prompt]
+background = "transparent"
+foreground = "magenta"
+template = "->"

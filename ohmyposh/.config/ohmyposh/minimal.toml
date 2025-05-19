@@ -80,5 +80,5 @@ template = "{{ if .Root}}#{{ else }}->{{ end }} "
 # Multiple line prompt
 [secondary_prompt]
 background = "transparent"
-foreground = "magenta"
+foreground = "yellow"
 template = "->"

@@ -32,9 +32,11 @@ from libqtile.backend.wayland.inputs import InputConfig
 import subprocess
 
 
+scriptsDir = "/home/roenoe/.config/qtile/scripts/"
+
 @hook.subscribe.startup_once
 def autostart():
-    subprocess.Popen(["/home/roenoe/.config/qtile/autostart.sh"])
+    subprocess.Popen([scriptsDir + "autostart.sh"])
 
 
 mod = "mod4"
@@ -79,7 +81,7 @@ keys = [
         [mod],
         "Space",
         lazy.spawn(
-            "pkill fuzzel || fuzzel --list-executables-in-path",
+            "bash " + scriptsDir + "fuzzel.sh",
             shell=True,
         ),
         desc="Summon menu",
@@ -170,7 +172,7 @@ widget_defaults = dict(
 extension_defaults = widget_defaults.copy()
 
 screens = [
-    #    Screen(),
+    Screen(),
     Screen(
         top=bar.Bar(
             [
@@ -202,6 +204,7 @@ screens = [
         # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
         # x11_drag_polling_rate = 60,
     ),
+    Screen(),
 ]
 
 # Drag floating layouts.

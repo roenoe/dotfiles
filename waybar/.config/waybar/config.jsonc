@@ -10,9 +10,11 @@
   "modules-left": [
     "sway/workspaces",
     "hyprland/workspaces",
+    "niri/workspaces",
     //"wlr/taskbar",
     "sway/window",
-    "hyprland/window"
+    "hyprland/window",
+    "niri/window"
   ],
   "modules-center": [
     "sway/mode",
@@ -52,6 +54,11 @@
     "icon-size": 20
   },
   "sway/window": {
+    "separate-outputs": true,
+    "icon": true,
+    "icon-size": 20
+  },
+  "niri/window": {
     "separate-outputs": true,
     "icon": true,
     "icon-size": 20

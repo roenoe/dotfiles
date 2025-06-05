@@ -14,14 +14,6 @@ set $down j
 set $up k
 set $right l
 
-# Set your preferred lock tool (swaylock / hyprlock)
-#set $lock pidof hyprlock || hyprlock
-set $lock pidof swaylock || sh ~/.config/sway/scripts/swaylock.sh
-
-# Set your preferred idle tool (swayidle / hypridle)
-#set $idle hypridle
-set $idle sh ~/.config/sway/scripts/swayidle.sh
-
 # Your preferred terminal emulator
 set $term kitty
 

@@ -34,7 +34,7 @@ Maple-mono font\
 `yay -S --needed hyprshot`
 
 #### Sway
-`sudo pacman -S --needed sway swaybg swayidle swaylock grim slurp waybar nm-connection-editor network-manager-applet fuzzel`
+`sudo pacman -S --needed sway swaybg swayidle swaylock grim slurp waybar nm-connection-editor network-manager-applet fuzzel autotiling`
 
 ### For Debian (some stuff might not exist in bookworm/12)
 These packages are always needed, no matter what you plan on installing:\
@@ -72,7 +72,7 @@ sudo dpkg -i "$GHOSTTY_DEB_FILE"
 rm "$GHOSTTY_DEB_FILE"`
 
 #### Sway
-`sudo apt install sway swaybg swayidle swaylock grim slurp waybar nm-connection-editor network-manager-applet fuzzel`
+`sudo apt install sway swaybg swayidle swaylock grim slurp waybar nm-connection-editor network-manager-applet fuzzel autotiling`
 
 #### Hyprland
 Not really reccommended. If you really want to install it anyway, the dependencies you will need are `hyprland hypridle hyprlock hyprpaper hyprshot waybar nm-connection-editor network-manager-applet fuzzel`. Some of these are not in the repos.
@@ -141,6 +141,7 @@ See [this](https://www.reddit.com/r/openSUSE/comments/16v0vk7/comment/k30mxyr/)
 * swaybg
 * sway*\idle+lock // hypr*idle+lock
 * SCREENSHOT UTIL
+* autotiling
 ### Prompt & shell
 * [Oh My Posh](https://ohmyposh.dev/docs/installation/linux)
 * zsh

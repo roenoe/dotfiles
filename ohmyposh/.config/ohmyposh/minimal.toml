@@ -64,7 +64,8 @@ style = "plain"
 foreground_templates = ["{{if gt .Code 0}}red{{end}}"]
 background = "transparent"
 foreground = "magenta"
-template = "->"
+#template = "->"
+template = '❯'
 
 
 
@@ -73,7 +74,7 @@ template = "->"
 background = "transparent"
 foreground = "magenta"
 foreground_templates = ["{{if gt .Code 0}}red{{end}}"]
-template = "{{ if .Root}}#{{ else }}->{{ end }} "
+template = "{{ if .Root}}#{{ else }}❯{{ end }} "
 
 
 
@@ -81,4 +82,5 @@ template = "{{ if .Root}}#{{ else }}->{{ end }} "
 [secondary_prompt]
 background = "transparent"
 foreground = "yellow"
-template = "->"
+#template = "->"
+template = '❯❯'

@@ -809,8 +809,17 @@ require('lazy').setup({
         dark0_hard = '#1b1b1b',
       },
     },
+    --init = function()
+    --  vim.cmd.colorscheme 'gruvbox'
+    --end,
+  },
+  {
+    -- catppuccin colorscheme
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
     init = function()
-      vim.cmd.colorscheme 'gruvbox'
+      vim.cmd.colorscheme 'catppuccin-mocha'
     end,
   },
 

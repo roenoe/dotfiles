@@ -9,14 +9,18 @@ font-family = "Maple Mono"
 font-size = 13
 
 # Colours
-theme = GruvboxDarkHard
+#theme = GruvboxDarkHard
+theme = catppuccin-mocha
 background-opacity = 1.0
-palette = 0=#1b1b1b
-background = #000000
-cursor-text = #1b1b1b
+#palette = 0=#1b1b1b
+#background = #000000
+#cursor-text = #1b1b1b
 
 # Keybinds
 keybind = ctrl+shift+f5=reload_config
+
+keybind = ctrl+alt+|=new_split:right
+keybind = ctrl+alt+-=new_split:down
 
 keybind = ctrl+alt+h=goto_split:left
 keybind = ctrl+alt+j=goto_split:bottom

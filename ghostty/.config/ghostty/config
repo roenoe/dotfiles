@@ -10,7 +10,8 @@ font-size = 13
 
 # Colours
 #theme = GruvboxDarkHard
-theme = catppuccin-mocha
+#theme = catppuccin-mocha
+theme = tokyonight
 background-opacity = 1.0
 #palette = 0=#1b1b1b
 #background = #000000

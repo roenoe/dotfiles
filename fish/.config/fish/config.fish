@@ -2,6 +2,10 @@ set fish_greeting
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
+#function fish_user_key_bindings
+#    fish_default_key_bindings -M insert
+#    fish_vi_key_bindings --no-erase insert
+#end
 
 # Environment variables
 set -x PATH $PATH $HOME/.local/bin/  # Must come first because it alters $PATH

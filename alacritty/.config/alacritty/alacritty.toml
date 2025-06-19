@@ -1,5 +1,5 @@
 general.import = [
-   "~/.config/alacritty/tokyonight.toml",
+   "~/.config/alacritty/kanagawa-wave.toml",
 ]
 general.live_config_reload = true # set config to live reload on change
 
@@ -34,13 +34,9 @@ opacity = 1
 
 # Default colors
 #[colors.primary]
-## hard contrast background = = '#1d2021'
-##background = '#282828' # Gruvbox medium
-#background = '#1b1b1b'  # Gruvbox dark hard
-##background = '#111111'
-## soft contrast background = = '#32302f'
-#foreground = '#ebdbb2'
-#
+#background = '#181616'
+
+
 ## Normal colors
 #[colors.normal]
 #black   = '#1b1b1b'

@@ -1,0 +1,44 @@
+# Kanagawa Theme for Alacritty
+# Converted directly from kanagawa.nvim's full Lua palette
+
+[colors.primary]
+background = "#1F1F28"  # sumiInk3
+foreground = "#DCD7BA"  # fujiWhite
+
+[colors.cursor]
+text = "#1F1F28"
+cursor = "#C8C093"  # oldWhite
+
+[colors.selection]
+text = "#1F1F28"
+background = "#2D4F67"  # waveBlue2
+
+[colors.normal]
+black   = "#16161D"  # sumiInk0
+red     = "#E82424"  # samuraiRed
+green   = "#76946A"  # autumnGreen
+yellow  = "#DCA561"  # autumnYellow
+blue    = "#7E9CD8"  # crystalBlue
+magenta = "#957FB8"  # oniViolet
+cyan    = "#6A9589"  # waveAqua1
+white   = "#C8C093"  # oldWhite
+
+[colors.bright]
+black   = "#54546D"  # sumiInk6
+red     = "#FF5D62"  # peachRed
+green   = "#98BB6C"  # springGreen
+yellow  = "#E6C384"  # carpYellow
+blue    = "#7FB4CA"  # springBlue
+magenta = "#938AA9"  # springViolet1
+cyan    = "#7AA89F"  # waveAqua2
+white   = "#DCD7BA"  # fujiWhite
+
+[colors.dim]
+black   = "#1A1A22"  # sumiInk2
+red     = "#C34043"  # autumnRed
+green   = "#667c5a"  # darker green tone
+yellow  = "#C0A36E"  # boatYellow2
+blue    = "#658594"  # dragonBlue
+magenta = "#766b90"  # lotusViolet2
+cyan    = "#5e857a"  # lotusAqua2
+white   = "#A6A69C"  # dragonGray

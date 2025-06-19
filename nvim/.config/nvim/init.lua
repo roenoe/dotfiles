@@ -804,14 +804,14 @@ require('lazy').setup({
     'ellisonleao/gruvbox.nvim',
     priority = 1000, -- make sure to load this before other plugins
     opts = {
-      contrast = 'asdf', -- can be set to "hard", "soft", or empty string
+      contrast = 'hard', -- can be set to "hard", "soft", or empty string
       palette_overrides = {
-        dark0_hard = '#1b1b1b',
+        dark0_hard = '#181616',
       },
     },
-    --init = function()
-    --  vim.cmd.colorscheme 'gruvbox'
-    --end,
+    init = function()
+      vim.cmd.colorscheme 'gruvbox'
+    end,
   },
   {
     -- catppuccin colorscheme
@@ -827,9 +827,26 @@ require('lazy').setup({
     lazy = false,
     priority = 1000,
     opts = {},
-    init = function()
-      vim.cmd.colorscheme 'tokyonight-night'
-    end,
+    --init = function()
+    --  vim.cmd.colorscheme 'tokyonight-night'
+    --end,
+  },
+  {
+    'rebelot/kanagawa.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {
+
+      transparent = false,
+      theme = 'wave',
+      background = {
+        dark = 'wave',
+        light = 'lotus',
+      },
+    },
+    --init = function()
+    --  vim.cmd.colorscheme 'kanagawa'
+    --end,
   },
   { -- floating command line
     'folke/noice.nvim',

@@ -13,9 +13,8 @@ theme = GruvboxDarkHard
 #theme = Kanagawa Wave
 background-opacity = 1.0
 background = #181616
-#background = #1b1b1b
-palette = 0=#1b1b1b
-cursor-text = #1b1b1b
+palette = #181616
+cursor-text = #181616
 
 # Keybinds
 keybind = ctrl+shift+f5=reload_config

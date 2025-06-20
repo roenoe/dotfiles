@@ -5,7 +5,7 @@ if [ -d $WALL_DIR ]; then
   WALLPAPER=$(find "$WALL_DIR" -type f | shuf -n 1)
   FLAG="-i $WALLPAPER"
 else
-  FLAG='-c 1b1b1b'
+  FLAG='-c 181616'
 fi
 
 swaylock $FLAG \

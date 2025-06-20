@@ -34,7 +34,7 @@ input * {
 
 ### Theme:
 
-set $background #1b1b1b
+set $background #181616
 set $foreground #ebdbb2
 set $red #cc241d
 set $green #b8bb26

@@ -1,8 +1,5 @@
 #! /bin/env bash
 
-# Environment variables
-export HYPRSHOT_DIR=$HOME/Pictures/screenshots/
-
 # Top bar
 waybar &
 nm-applet --indicator &

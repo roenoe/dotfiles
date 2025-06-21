@@ -39,5 +39,6 @@ alias lsa "ls -l --total-size"
 alias .. "cd .."
 alias fetch "fastfetch --config ~/.config/fastfetch/autostart.jsonc"
 alias rg "rg -i --hidden"
+alias lg "lazygit"
 
 fetch

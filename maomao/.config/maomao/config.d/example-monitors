@@ -1,0 +1,6 @@
+# This is an example of how you can manage your monitors. Copy this file to ./monitors.conf to use it.
+
+# IMPORTANT!! Don't use negative numbers for any of your monitors. This will break xwayland windows in those places.
+monitorrule=DP-1,0.5,2,dwindle,0,1,1440,300
+monitorrule=DP-2,0.5,1,tile,1,1,0,0
+monitorrule=DP-3,0.5,1,tile,1,1,5280,0

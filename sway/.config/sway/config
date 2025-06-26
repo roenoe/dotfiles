@@ -46,8 +46,8 @@ set $white #ebdbb2
 set $orange #d65d0e
 set $gray #928374
 
-default_border pixel 2
-default_floating_border pixel 2
+default_border pixel 3
+default_floating_border pixel 3
 
 #client.status $border $background $text $indicator $child-border
 client.focused $blue $background $foreground $cyan $blue

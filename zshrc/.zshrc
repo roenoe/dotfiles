@@ -82,6 +82,8 @@ eval "$(fzf --zsh)"
 
 fetch
 
-# Enable ohmyposh / starship
-#eval "$(starship init zsh)"
+# Enable ohmyposh
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/minimal.toml)"
+
+# Enable starship
+#eval "$(starship init zsh)"

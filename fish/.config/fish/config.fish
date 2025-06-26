@@ -21,7 +21,21 @@ else
 end
 
 # Run oh-my-posh
-eval "$(oh-my-posh init fish --config $HOME/.config/ohmyposh/minimal.toml)"
+#eval "$(oh-my-posh init fish --config $HOME/.config/ohmyposh/minimal.toml)"
+
+# Run starship
+function starship_transient_prompt_func
+  tput cuu1
+  starship module character
+end
+
+function prompt_newline --on-event fish_postexec
+  echo
+end
+
+alias clear "command clear; commandline -f clear-screen"
+starship init fish | source
+enable_transience
 
 # Set up fzf key bindings
 fzf --fish | FZF_ALT_C_COMMAND= FZF_CTRL_T_COMMAND= source

@@ -136,6 +136,7 @@ See [this](https://www.reddit.com/r/openSUSE/comments/16v0vk7/comment/k30mxyr/)
 * hyprlock
 * hyprpaper
 * hyprshot
+* wlr-dpms
 #### Sway
 * sway // swayfx
 * swaybg
@@ -148,6 +149,8 @@ See [this](https://www.reddit.com/r/openSUSE/comments/16v0vk7/comment/k30mxyr/)
 * fzf
 * unzip
 * eza (or exa)
+* starship
+* fish
 ### Other tools
 * fastfetch
 * tmux

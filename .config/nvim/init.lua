@@ -809,9 +809,9 @@ require('lazy').setup({
         dark0_hard = '#181616',
       },
     },
-    init = function()
-      vim.cmd.colorscheme 'gruvbox'
-    end,
+    --init = function()
+    --  vim.cmd.colorscheme 'gruvbox'
+    --end,
   },
   {
     -- catppuccin colorscheme
@@ -844,9 +844,9 @@ require('lazy').setup({
         light = 'lotus',
       },
     },
-    --init = function()
-    --  vim.cmd.colorscheme 'kanagawa'
-    --end,
+    init = function()
+      vim.cmd.colorscheme 'kanagawa'
+    end,
   },
   { -- floating command line
     'folke/noice.nvim',

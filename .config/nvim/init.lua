@@ -55,6 +55,9 @@ vim.g.have_nerd_font = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- Make gg go to start of line
+vim.opt.startofline = true
+
 -- Tabs, spaces, and everything else that is useful
 vim.opt.expandtab = true
 vim.opt.softtabstop = 2

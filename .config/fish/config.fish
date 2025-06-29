@@ -1,7 +1,4 @@
 set fish_greeting
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
 #function fish_user_key_bindings
 #    fish_default_key_bindings -M insert
 #    fish_vi_key_bindings --no-erase insert
@@ -35,7 +32,9 @@ alias fetch "fastfetch --config ~/.config/fastfetch/autostart.jsonc"
 alias rg "rg -i --hidden"
 alias lg "lazygit"
 
-fetch
+if status is-interactive
+    fetch
+end
 
 # Run oh-my-posh
 #eval "$(oh-my-posh init fish --config $HOME/.config/ohmyposh/minimal.toml)"

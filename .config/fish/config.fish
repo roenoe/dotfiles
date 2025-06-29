@@ -20,6 +20,23 @@ else
     set -x MACHINAHOSTNAME (uname -n)
 end
 
+# Aliases
+## Nvim
+alias vi nvim
+alias vim nvim
+alias vimdiff "nvim -d"
+## Eza
+alias ls "exa --icons=always -ah --group-directories-first"
+alias ll "ls -l --git"
+alias lsa "ls -l --total-size"
+## Other
+alias .. "cd .."
+alias fetch "fastfetch --config ~/.config/fastfetch/autostart.jsonc"
+alias rg "rg -i --hidden"
+alias lg "lazygit"
+
+fetch
+
 # Run oh-my-posh
 #eval "$(oh-my-posh init fish --config $HOME/.config/ohmyposh/minimal.toml)"
 
@@ -40,20 +57,3 @@ enable_transience
 
 # Set up fzf key bindings
 fzf --fish | FZF_ALT_C_COMMAND= FZF_CTRL_T_COMMAND= source
-
-# Aliases
-## Nvim
-alias vi nvim
-alias vim nvim
-alias vimdiff "nvim -d"
-## Eza
-alias ls "exa --icons=always -ah --group-directories-first"
-alias ll "ls -l --git"
-alias lsa "ls -l --total-size"
-## Other
-alias .. "cd .."
-alias fetch "fastfetch --config ~/.config/fastfetch/autostart.jsonc"
-alias rg "rg -i --hidden"
-alias lg "lazygit"
-
-fetch

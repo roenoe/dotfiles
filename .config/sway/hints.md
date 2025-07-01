@@ -32,6 +32,9 @@ Super + Escape
 ### Exit sway
 Super + Shift + Escape
 
+### 1password quick access
+Control + Shift + Space
+
 
 ## Move around
 ### Change focus
@@ -61,9 +64,6 @@ Super + O => Toggle split for current container
 ### Focus parent/child container
 Super + A => Focus parent container
 Super + E => Focus child container
-
-### Tabbed layout
-Super + t => Enter tabbed layout
 
 ### Fullscreen
 Super + F

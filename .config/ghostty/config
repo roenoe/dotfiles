@@ -9,13 +9,13 @@ font-family = "Maple Mono"
 font-size = 13
 
 # Colours
-#theme = GruvboxDarkHard
+theme = GruvboxDarkHard
 #theme = Kanagawa Wave
-theme = tokyonight_night
+#theme = tokyonight_night
 background-opacity = 1.0
-#background = #181616
-#palette = 0=#181616
-#cursor-text = #181616
+background = #181616
+palette = 0=#181616
+cursor-text = #181616
 
 # Keybinds
 keybind = ctrl+shift+f5=reload_config

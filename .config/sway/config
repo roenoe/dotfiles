@@ -57,3 +57,6 @@ client.urgent $red $background $foreground $red $red
 # Include other configs in the config.d directory
 include /etc/sway/config.d/*
 include ~/.config/sway/config.d/*.conf
+
+### Mouse theme
+seat * xcursor_theme Banana 32

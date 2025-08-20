@@ -33,7 +33,8 @@ alias rg "rg -i --hidden"
 alias lg "lazygit"
 
 if status is-interactive
-    fetch
+  set -x SSH_AUTH_SOCK ~/.1password/agent.sock
+  fetch
 end
 
 # Run oh-my-posh

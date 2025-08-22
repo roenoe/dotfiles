@@ -8,6 +8,9 @@ Super + F1
 ### Start terminal
 Super + Return
 
+### Start a floating terminal
+Super + T
+
 ### Kill active window
 Super + Q
 

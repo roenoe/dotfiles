@@ -72,7 +72,7 @@ sudo dpkg -i "$GHOSTTY_DEB_FILE"
 rm "$GHOSTTY_DEB_FILE"`
 
 #### Sway
-`sudo apt install sway swaybg swayidle swaylock grim slurp waybar nm-connection-editor network-manager-applet fuzzel autotiling`
+`sudo apt install sway swaybg swayidle swaylock grim slurp waybar nm-connection-editor network-manager-applet fuzzel autotiling sway-notification-center libnotify-bin`
 
 #### Hyprland
 Not really reccommended. If you really want to install it anyway, the dependencies you will need are `hyprland hypridle hyprlock hyprpaper hyprshot waybar nm-connection-editor network-manager-applet fuzzel`. Some of these are not in the repos.

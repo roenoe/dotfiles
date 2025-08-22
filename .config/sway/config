@@ -32,8 +32,6 @@ input * {
   repeat_delay 300
 }
 
-#for_window [app_id="kitty"] floating enable;
-
 ### Theme:
 
 set $background #181616

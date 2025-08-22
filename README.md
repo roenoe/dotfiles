@@ -8,7 +8,7 @@ These packages are always needed, no matter what you plan on installing:\
 `sudo pacman -S --needed git wget curl stow`
 
 #### Prompt & shell
-`sudo pacman -S --needed zsh fzf eza unzip`
+`sudo pacman -S --needed zsh fzf eza unzip zoxide`
 
 Oh My Posh:\
 `mkdir -p ~/.local/bin`\
@@ -41,7 +41,7 @@ These packages are always needed, no matter what you plan on installing:\
 `sudo apt install sudo wget git curl stow`
 
 #### Prompt & shell
-`sudo apt install zsh fzf eza unzip`
+`sudo apt install zsh fzf eza unzip zoxide`
 
 #### Other CLI tools
 `sudo apt install tmux entr neovim fastfetch`
@@ -151,6 +151,7 @@ See [this](https://www.reddit.com/r/openSUSE/comments/16v0vk7/comment/k30mxyr/)
 * eza (or exa)
 * starship
 * fish
+* zoxide
 ### Other tools
 * fastfetch
 * tmux

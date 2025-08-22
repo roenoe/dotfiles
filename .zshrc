@@ -79,6 +79,7 @@ alias lg="lazygit" # faster way to use git
 
 # Shell integrations
 eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh )"
 
 fetch
 

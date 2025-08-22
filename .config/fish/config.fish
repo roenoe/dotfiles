@@ -55,5 +55,6 @@ alias clear "command clear; commandline -f clear-screen"
 starship init fish | source
 enable_transience
 
-# Set up fzf key bindings
+# Shell integrations
 fzf --fish | FZF_ALT_C_COMMAND= FZF_CTRL_T_COMMAND= source
+zoxide init fish --cmd cd | source

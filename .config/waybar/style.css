@@ -1,7 +1,7 @@
 @import "gruv.css";
 
 * {
-  font-family: "Maple Mono", "JetBrains MonoNL", "JetBrains Mono", "JetBrainsMono Nerd Font", "CaskaydiaCove Nerd Font", "Source Code Pro";
+  font-family: "Maple Mono Normal NF", "JetBrains MonoNL", "JetBrains Mono", "JetBrainsMono Nerd Font", "CaskaydiaCove Nerd Font", "Source Code Pro", "FiraCode";
   font-size: 16px;
   min-height: 0px;
   padding: 0px;

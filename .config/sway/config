@@ -3,18 +3,14 @@
 ### Variables
 include ~/.config/sway/config.d/variables.conf
 
-
 ### Options
 focus_follows_mouse no
-gaps inner 5
 #smart_gaps on
 #smart_borders on
 #mouse_warping container
 
 ### Input configuration
-#
-# Example configuration:
-#
+
 input type:touchpad {
   dwt enabled
   tap enabled
@@ -26,6 +22,7 @@ bindgesture {
   swipe:right workspace prev
   swipe:left workspace next
 }
+
 input * {
   xkb_layout "no"
   repeat_rate 50
@@ -46,6 +43,9 @@ set $white #ebdbb2
 set $orange #d65d0e
 set $gray #928374
 
+### Mouse theme
+seat * xcursor_theme Bibata-Original-Ice 32
+
 default_border pixel 3
 default_floating_border pixel 3
 
@@ -58,6 +58,3 @@ client.urgent $red $background $foreground $red $red
 # Include other configs in the config.d directory
 include /etc/sway/config.d/*
 include ~/.config/sway/config.d/*.conf
-
-### Mouse theme
-seat * xcursor_theme Banana 32

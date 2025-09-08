@@ -1,36 +1,10 @@
-console_title_template = '{{ if .Root }} root@{{ end }}{{ .HostName }} {{ .PWD }}'
+console_title_template = '{{ if .Root }} root@{{ end }}{{ .Env.MACHINAHOSTNAME }} {{ .PWD }}'
 final_space = true
 version = 3
 
 # palette for everyone except root
 [palette]
-  black = '#000000'
-  red = 'red'
-  green = 'green'
-  yellow = 'yellow'
-  blue = 'blue'
-  magenta = 'magenta'
-  lightMagenta = 'lightMagenta'
-  cyan = 'cyan'
-  white = '#eeeeee'
   background = '#3c3836'
-
-# check for whether root is present
-[palettes]
-  template = '{{ if .Root }}root{{end}}'
-
-# palette for root
-  [palettes.list.root]
-    background = 'red'
-    black = '#000000'
-    red = '#000000'
-    green = '#000000'
-    yellow = '#000000'
-    blue = '#000000'
-    magenta = '#000000'
-    lightMagenta = '#000000'
-    cyan = '#000000'
-    white = '#ffffff'
 
 ###############
 # left blocks #
@@ -47,7 +21,7 @@ version = 3
     style = 'powerline'
     powerline_symbol = ''
     background = 'p:background'
-    foreground = 'p:white'
+    foreground = 'lightWhite'
     template = '{{.Icon}} '
 
 # username@host block
@@ -60,8 +34,8 @@ version = 3
     style = 'powerline'
     powerline_symbol = ''
     background = 'p:background'
-    foreground = 'p:green'
-    template = ' {{ if .SSHSession }} {{ end }}{{ .UserName }}</><p:blue>@</><p:red>{{ .HostName }} '
+    foreground = 'green'
+    template = ' <lightWhite>{{ if .SSHSession }} {{ end }}{{ if .Root }}</><red>{{ end }}{{ .UserName }}</></><blue>@</>{{ if contains "prod" .Env.MACHINAHOSTNAME }}<red>{{ end }}{{ .Env.MACHINAHOSTNAME }} '
 
 # path block
 [[blocks]]
@@ -72,7 +46,7 @@ version = 3
     type = 'path'
     style = 'powerline'
     powerline_symbol = ''
-    foreground = 'p:yellow'
+    foreground = 'yellow'
     background = 'p:background'
     template = ' {{ .Path }}</> '
 
@@ -90,8 +64,8 @@ version = 3
     style = 'powerline'
     powerline_symbol = ''
     background = 'p:background'
-    foreground = 'p:magenta'
-    template = ' {{ .HEAD }}<p:lightMagenta>{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} {{if .BranchStatus }} {{ .BranchStatus }} {{ end }}</>'
+    foreground = 'magenta'
+    template = ' {{ .HEAD }}<lightMagenta>{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} {{if .BranchStatus }} {{ .BranchStatus }} {{ end }}</>'
 
 # git block properties
     [blocks.segments.properties]
@@ -107,7 +81,7 @@ version = 3
     type = 'time'
     style = 'powerline'
     powerline_symbol = ''
-    foreground = 'p:cyan'
+    foreground = 'cyan'
     background = 'p:background'
     template = ' {{ .CurrentDate | date .Format}} '
 
@@ -129,7 +103,7 @@ version = 3
     style = 'diamond'
     leading_diamond = ' '
     trailing_diamond = ''
-    foreground = 'p:yellow'
+    foreground = 'yellow'
     background = 'p:background'
     template = '{{ .FormattedMs }}'
 
@@ -145,15 +119,15 @@ version = 3
   alignment = 'left'
   newline = true
 
-# prompt
+# Prompt
   [[blocks.segments]]
     type = 'text'
     style = 'plain'
     foreground_templates = ['{{if gt .Code 0}}red{{end}}',]
     foreground = 'green'
-    template = '❯'
+    template = '{{if contains "prod" .Env.MACHINAHOSTNAME }}<red>{{ .Env.MACHINAHOSTNAME }}</> {{ end }}❯'
 
-# what previous prompts look like
+# Transient prompt
 [transient_prompt]
   background = 'transparent'
   foreground = 'green' 

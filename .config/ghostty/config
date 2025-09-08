@@ -1,11 +1,11 @@
 # GTK style settings
-gtk-titlebar = false
-gtk-adwaita = false
+gtk-titlebar = true
+gtk-adwaita = true
 gtk-tabs-location = top
 #gtk-toolbar-style = raised
 
 # Fonts
-font-family = "Maple Mono"
+font-family = "Maple Mono Normal NF"
 font-size = 13
 
 # Colours
@@ -18,6 +18,7 @@ palette = 0=#181616
 cursor-text = #181616
 
 # Keybinds
+mouse-scroll-multiplier = 0.25
 keybind = ctrl+shift+f5=reload_config
 
 keybind = ctrl+alt+|=new_split:right

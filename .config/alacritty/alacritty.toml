@@ -7,19 +7,19 @@ general.live_config_reload = true # set config to live reload on change
 size = 13.0
 
 [font.normal]
-family = "Maple Mono"
+family = "Maple Mono Normal NF"
 style = "Medium"
 
 [font.bold]
-family = "Maple Mono"
+family = "Maple Mono Normal NF"
 style = "Heavy"
 
 [font.bold_italic]
-family = "Maple Mono"
+family = "Maple Mono Normal NF"
 style = "Heavy Italic"
 
 [font.italic]
-family = "Maple Mono"
+family = "Maple Mono Normal NF"
 style = "Medium Italic"
 
 [env] # environment variables

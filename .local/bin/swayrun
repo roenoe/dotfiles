@@ -1,9 +1,0 @@
-#!/bin/env bash
-
-# Enable ssh-agent.socket (custom ssh agent)
-export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
-
-# Hyprshot save location
-export HYPRSHOT_DIR=$HOME/Pictures/screenshots/
-
-sway

@@ -10,11 +10,8 @@
   "modules-left": [
     "sway/workspaces",
     "hyprland/workspaces",
-    "niri/workspaces",
-    //"wlr/taskbar",
     "sway/window",
-    "hyprland/window",
-    "niri/window"
+    "hyprland/window"
   ],
   "modules-center": [
     "sway/mode",
@@ -36,29 +33,12 @@
     "on-scroll-up": "hyprctl dispatch workspace +1",
     "on-scroll-down": "hyprctl dispatch workspace -1"
   },
-  "wlr/taskbar": {
-    "format": "{icon} {title:.30}",
-    "all-outputs": "false",
-    "icon-size": 20,
-    "icon-theme": "Numix-Circle",
-    "tooltip-format": "{title}",
-    "on-click": "",
-    "on-click-middle": "",
-    "rewrite": {
-      "Firefox Web Browser": "Firefox"
-    }
-  },
   "hyprland/window": {
     "separate-outputs": true,
     "icon": true,
     "icon-size": 20
   },
   "sway/window": {
-    "separate-outputs": true,
-    "icon": true,
-    "icon-size": 20
-  },
-  "niri/window": {
     "separate-outputs": true,
     "icon": true,
     "icon-size": 20
@@ -90,19 +70,11 @@
       ]
     }
   },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
-    }
-  },
   "tray": {
     // "icon-size": 21,
     "spacing": 10
   },
   "clock": {
-    //"format": "󰸘 {0:%Y-%m-%d}  {0:%H:%M:%S}",
     "format": "󰸘 {0:%d.%m.%Y}  {0:%H:%M:%S}",
     "interval": 1,
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"

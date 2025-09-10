@@ -22,7 +22,7 @@ alias ..="cd .."
 alias fetch="fastfetch --config $XDG_CONFIG_HOME/fastfetch/autostart.jsonc"
 
 # Ripgrep search through hidden files
-alias rg="rg --hidden"
+alias rg="rg -i --hidden"
 
 # Faster way to use git
 alias lg="lazygit"

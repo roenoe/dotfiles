@@ -41,7 +41,8 @@ end
 #eval "$(oh-my-posh init fish --config $HOME/.config/ohmyposh/minimal.toml)"
 
 # Run starship
-set -x STARSHIP_CONFIG $HOME/.config/starship/gruvbox-powerline.toml
+#set -x STARSHIP_CONFIG $HOME/.config/starship/gruvbox-powerline.toml
+set -x STARSHIP_CONFIG $HOME/.config/starship/pure.toml
 function starship_transient_prompt_func
   tput cuu1
   starship module character

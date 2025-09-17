@@ -1,0 +1,66 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+version: 3
+enable_cursor_positioning: true
+final_space: true # Might make your prompt slow
+console_title_template: '{{ if .Root }} root@{{ end }}{{ .Env.MACHINAHOSTNAME }} {{ .PWD }}'
+
+blocks:
+    - type: prompt # Top block
+      alignment: left
+      newline: true
+      segments:
+        - type: session
+          template: '{{ if .SSHSession }}<default> </>{{ end }}{{ if .Root }}<red>{{ end }}<yellow>{{ .UserName }}</><blue>@</>{{ if contains "prod" .Env.MACHINAHOSTNAME }}<red>{{ end }}{{ .Env.MACHINAHOSTNAME }} '
+          foreground: green
+          background: transparent
+          style: plain
+        - type: path
+          template: '{{ .Path }}'
+          foreground: magenta
+          background: transparent
+          style: plain
+          properties:
+            style: full
+        - type: git
+          template: ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}<lightMagenta>*</>{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+          foreground: darkGray
+          background: transparent
+          style: plain
+          properties:
+            branch_icon: ""
+            fetch_status: true
+        - type: executiontime
+          properties:
+            style: round
+            threshold: 2000
+          template: <white> took </>{{ .FormattedMs }}
+          foreground: yellow
+          background: transparent
+          style: plain
+          foreground_templates:
+            - '{{if gt .Code 0}}red{{end}}'
+
+    - type: prompt # Bottom block
+      name: Prompt
+      alignment: left
+      segments:
+        - type: text
+          template: ❯
+          foreground: magenta
+          background: transparent
+          style: plain
+          foreground_templates:
+            - '{{if gt .Code 0}}red{{end}}'
+      newline: true
+
+transient_prompt:
+    template: '{{ if .Root}}#{{ else }}❯{{ end }} '
+    foreground: magenta
+    background: transparent
+    foreground_templates:
+        - '{{if gt .Code 0}}red{{end}}'
+
+secondary_prompt:
+    template: ❯
+    foreground: yellow
+    background: transparent

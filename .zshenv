@@ -20,7 +20,7 @@ if [[ -f "/etc/machinahostname" ]]
 then
   export MACHINAHOSTNAME=$(echo "[$(cat /etc/machinahostname | rev | cut -f3- -d"." | rev)]")
 else
-  export MACHINAHOSTNAME=$(uname -n)
+  export MACHINAHOSTNAME=$(hostname -s)
 fi
 
 export HOSTNAME=$(uname -n)

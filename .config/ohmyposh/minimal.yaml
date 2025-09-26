@@ -3,6 +3,8 @@ version: 3
 enable_cursor_positioning: true
 final_space: true # Might make your prompt slow
 console_title_template: '{{ if .Root }} root@{{ end }}{{ .Env.MACHINAHOSTNAME }} {{ .PWD }}'
+auto_upgrade: false
+disable_notice: true
 
 blocks:
     - type: prompt # Top block
@@ -45,7 +47,9 @@ blocks:
       alignment: left
       segments:
         - type: text
-          template: ❯
+        # template: ❯
+          template: λ
+        # template: →
           foreground: magenta
           background: transparent
           style: plain
@@ -54,7 +58,9 @@ blocks:
       newline: true
 
 transient_prompt:
-    template: '{{ if .Root}}#{{ else }}❯{{ end }} '
+  # template: '{{ if .Root}}#{{ else }}❯{{ end }} '
+    template: '{{ if .Root}}#{{ else }}λ{{ end }} '
+  # template: '{{ if .Root}}#{{ else }}→{{ end }} '
     foreground: magenta
     background: transparent
     foreground_templates:

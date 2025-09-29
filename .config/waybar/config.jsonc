@@ -75,7 +75,7 @@
     "spacing": 10
   },
   "clock": {
-    "format": "󰸘 {0:%d.%m.%Y}  {0:%H:%M:%S}",
+    "format": "{0:%A} 󰸘 {0:%d.%m.%Y}  {0:%H:%M:%S}",
     "interval": 1,
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },

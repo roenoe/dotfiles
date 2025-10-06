@@ -14,6 +14,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light fdellwing/zsh-bat
+zinit light 3v1n0/zsh-bash-completions-fallback
 zinit light Aloxaf/fzf-tab  # Optional for fzf completions
 
 # Add in snippets

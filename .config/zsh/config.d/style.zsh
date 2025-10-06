@@ -10,3 +10,5 @@ zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' menu no  # For fzf completions
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --color=always --icons=always $realpath'  # For fzf completions
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color=always --icons=always $realpath'  # For fzf completions
+
+zstyle ':completion:*' completer _complete _bash_completions _files

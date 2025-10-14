@@ -11,7 +11,7 @@ if [[ -x "$(which zoxide)" ]]; then
 fi
 
 # Enable ohmyposh
-eval "$(oh-my-posh init zsh --config $XDG_CONFIG_HOME/ohmyposh/minimal.yaml)"
+eval "$(oh-my-posh init zsh --config $XDG_CONFIG_HOME/ohmyposh/notrussel.yaml)"
 
 # Enable starship
 #eval "$(starship init zsh)"

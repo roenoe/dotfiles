@@ -1,0 +1,52 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+blocks:
+    - type: prompt
+      alignment: left
+      segments:
+
+        - template: "➜ "
+          foreground: 'lightGreen'
+          foreground_templates:
+            - '{{if gt .Code 0}}red{{end}}'
+          type: text
+          style: plain
+
+        - properties:
+            threshold: 2000
+            style: round
+          foreground: yellow
+          foreground_templates:
+            - '{{if gt .Code 0}}red{{end}}'
+          style: plain
+          template: "<lightWhite>took </>{{ .FormattedMs }} "
+          type: executiontime
+
+        - properties:
+            style: agnoster_full
+          template: "{{ if and .Segments.Git.RepoName (ne .Segments.Git.RepoName .Path) }}{{ .Segments.Git.RepoName }}{{ trimPrefix .Segments.Git.Dir .PWD }}{{ else }}{{ .Path }}{{ end }}"
+          foreground: '#56B6C2'
+          type: path
+          style: plain
+
+        - properties:
+            branch_icon: ""
+            fetch_status: true
+          template: ' git:(<lightRed>{{ .HEAD }}</>)'
+        # foreground: '#D0666F'
+          foreground: 'blue'
+          type: git
+          style: plain
+
+    - type: rprompt
+      segments:
+        - type: time
+          style: plain
+          properties:
+            time_format: "15:04"
+
+version: 3
+final_space: true
+console_title_template: '{{ if .Root }} root@{{ end }}{{ .Env.MACHINAHOSTNAME }} {{ .PWD }}'
+auto_upgrade: false
+isable_notice: true

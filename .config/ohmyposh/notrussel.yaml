@@ -32,7 +32,7 @@ blocks:
         - properties:
             branch_icon: ""
             fetch_status: true
-          template: ' git:(<lightRed>{{ .HEAD }}</>)'
+          template: ' git:(<lightRed>{{ .HEAD }}</>{{ if or (.Working.Changed) (.Staging.Changed) }}<red> *</>{{ end }}<cyan>{{ if gt .Behind 0 }} ⇣{{ end }}{{ if gt .Ahead 0 }} ⇡{{ end }}</>)'
         # foreground: '#D0666F'
           foreground: 'blue'
           type: git

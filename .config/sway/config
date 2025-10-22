@@ -4,7 +4,7 @@
 include ~/.config/sway/config.d/variables.conf
 
 ### Options
-focus_follows_mouse no
+focus_follows_mouse yes
 #smart_gaps on
 #smart_borders on
 #mouse_warping container

@@ -11,7 +11,7 @@ fi
 # Eza
 if [[ -x "$(which eza)" ]]; then
   alias ls="eza --icons=always -ah --group-directories-first "
-  alias ll="ls -l --git"
+  alias ll="ls -l --git --group"
   alias lsa="ls -l --total-size"
 fi
 

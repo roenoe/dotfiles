@@ -1,6 +1,5 @@
 # GTK style settings
 gtk-titlebar = true
-gtk-adwaita = true
 gtk-tabs-location = top
 #gtk-toolbar-style = raised
 
@@ -9,7 +8,7 @@ font-family = "Maple Mono Normal NF"
 font-size = 13
 
 # Colours
-theme = GruvboxDarkHard
+theme = Gruvbox Dark Hard
 #theme = Kanagawa Wave
 #theme = tokyonight_night
 background-opacity = 1.0
@@ -18,7 +17,6 @@ palette = 0=#181616
 cursor-text = #181616
 
 # Keybinds
-mouse-scroll-multiplier = 0.25
 keybind = ctrl+shift+f5=reload_config
 
 keybind = ctrl+alt+|=new_split:right

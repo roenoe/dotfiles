@@ -5,6 +5,11 @@ blocks:
       alignment: left
       segments:
 
+        - template: '{{ if .SSHSession }}<default> </>{{ if .Root }}<red>{{ end }}<yellow>{{ .UserName }}</><blue>@</>{{ if contains "prod" .Env.MACHINAHOSTNAME }}<red>{{ end }}{{ .Env.MACHINAHOSTNAME }} {{ end }}'
+          type: session
+          foreground: green
+          style: plain
+
         - template: "➜ "
           foreground: 'lightGreen'
           foreground_templates:

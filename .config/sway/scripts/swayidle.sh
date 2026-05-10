@@ -1,11 +1,9 @@
 #!/bin/bash
 
-#LOCKUTIL=hyprlock
 LOCKUTIL=swaylock
-#LOCK="pidof hyprlock || hyprlock"
 LOCK="pidof swaylock || sh ~/.config/sway/scripts/swaylock.sh"
-SLEEP="pidof $LOCKUTIL && (hyprctl dispatch dpms off || swaymsg 'output * dpms off')"
-UNSLEEP="hyprctl dispatch dpms on || swaymsg 'output * dpms on'"
+SLEEP="pidof $LOCKUTIL && swaymsg 'output * dpms off'"
+UNSLEEP="swaymsg 'output * dpms on'"
 
 swayidle -w \
   timeout 10 "$SLEEP" \

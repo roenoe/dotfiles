@@ -15,7 +15,7 @@ bindkey "^[[3~" delete-char
 
 # Esc + backspace bash parity
 backward-kill-dir () {
-    local WORDCHARS=${${WORDCHARS/\/}/.}
+    local WORDCHARS=${${${WORDCHARS/\/}/./}/=}
     zle backward-kill-word
     zle -f kill
 }

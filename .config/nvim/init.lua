@@ -852,7 +852,7 @@ require('lazy').setup({
       },
     },
     init = function()
-      vim.cmd.colorscheme 'gruvbox'
+      vim.cmd.colorscheme 'tokyonight-night'
     end,
   },
   { -- floating command line

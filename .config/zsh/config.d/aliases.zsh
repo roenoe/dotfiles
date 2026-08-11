@@ -37,3 +37,8 @@ fi
 if [[ -x "$(which fdfind)" ]] ; then
   alias fd="fdfind -H"
 fi
+
+# kubectl
+if [[ -x "$(which kubectl)" ]]; then
+  alias k="kubectl"
+fi

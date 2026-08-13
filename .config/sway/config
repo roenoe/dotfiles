@@ -49,9 +49,7 @@ seat * xcursor_theme Bibata-Original-Ice 32
 default_border pixel 3
 default_floating_border pixel 3
 
-# The defaults above lose to clients that request client-side decorations
-# (kitty, nautilus, firefox), and don't apply to windows that become floating
-# later. This forces server-side borders on everything.
+# Force server side decoration so floating windows can have borders
 for_window [all] border pixel 3
 
 #client.status $border $background $text $indicator $child-border

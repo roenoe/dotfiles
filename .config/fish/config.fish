@@ -32,10 +32,10 @@ alias fetch "fastfetch --config ~/.config/fastfetch/autostart.jsonc"
 alias rg "rg -i --hidden"
 alias lg "lazygit"
 
-if status is-interactive
-  set -x SSH_AUTH_SOCK ~/.1password/agent.sock
-  fetch
-end
+#if status is-interactive
+#  set -x SSH_AUTH_SOCK ~/.1password/agent.sock
+#  fetch
+#end
 
 # Run oh-my-posh
 #eval "$(oh-my-posh init fish --config $HOME/.config/ohmyposh/minimal.toml)"

@@ -7,8 +7,8 @@
 #output [NAME] resolution [RESOLUTION]@[FRAMERATE]Hz position [X-AXIS],[Y-AXIS] transform [0|90|180|270]
 
 # IMPORTANT!! Don't use negative numbers for any of your monitors. This will break xwayland windows in those places.
-#output DP-1 resolution 3840x2160@120Hz position 1440,300
-#output DP-2 resolution 2560x1440 position 0,0 transform 270
+#output DP-1 resolution 5120x2160@75Hz position 0,300
+#output DP-2 resolution 2560x1440 position 5120,0 transform 270
 #output DP-3 resolution 2560x1440 position 5280,0 transform 270
 
 # Workspaces
@@ -20,5 +20,10 @@ workspace 4 output DP-1
 workspace 5 output DP-1
 workspace 6 output DP-1
 workspace 7 output DP-1
-workspace 8 output DP-2
-workspace 9 output DP-3
+workspace 8 output DP-1
+workspace 9 output DP-1
+workspace 10 output DP-1
+workspace 11 output DP-1
+workspace 12 output DP-1
+workspace display2 output DP-2
+#workspace display3 output DP-3

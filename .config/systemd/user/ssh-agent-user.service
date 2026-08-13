@@ -1,0 +1,16 @@
+[Unit]
+Description=SSH key agent (user-managed)
+Documentation=man:ssh-agent(1)
+# Ready before anything in the graphical session tries to use SSH_AUTH_SOCK
+Before=graphical-session-pre.target
+
+[Service]
+Type=simple
+Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
+# ssh-agent refuses to bind if a stale socket file is left behind by a crash
+ExecStartPre=-/usr/bin/rm -f %t/ssh-agent.socket
+ExecStart=/usr/bin/ssh-agent -D -a $SSH_AUTH_SOCK
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

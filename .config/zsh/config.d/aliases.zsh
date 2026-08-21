@@ -31,11 +31,10 @@ alias lg="lazygit"
 alias ye="yadm enter fish"
 
 # Alias fdfind to fd
-if [[ -x "$(which fd)" ]]; then
-  alias fd="fd -H"
-fi
-if [[ -x "$(which fdfind)" ]] ; then
+if command -v fdfind &>/dev/null; then
   alias fd="fdfind -H"
+elif command -v fd &>/dev/null; then
+  alias fd="fd -H"
 fi
 
 # kubectl

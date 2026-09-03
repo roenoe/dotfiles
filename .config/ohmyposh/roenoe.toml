@@ -104,13 +104,15 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
     type = 'executiontime'
     style = 'powerline'
     powerline_symbol = ''
-    foreground = 'p:yellow'
+    foreground = 'lightWhite'
     background = 'p:background'
     template = ' {{ .FormattedMs }} '
 
 # only report commands slower than 5s
     [blocks.segments.properties]
       threshold = 5000
+      style = 'round'
+
 
 ###############
 # right block #

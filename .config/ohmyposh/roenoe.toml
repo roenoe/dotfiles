@@ -64,7 +64,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
     foreground = 'p:green'
     template = ' {{ if .SSHSession }} {{ end }}{{ .UserName }}</><p:blue>@</><p:red>{{ .HostName }} '
 
-# path block
+# path + git block (git must share the block so the path template can read .Segments.Git)
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
@@ -75,17 +75,13 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
     powerline_symbol = ''
     foreground = 'p:yellow'
     background = 'p:background'
-    template = ' {{ .Path }}</> '
+    template = ' {{ if and .Segments.Git.RepoName (ne .Segments.Git.RepoName .Path) }}{{ .Segments.Git.RepoName }}{{ trimPrefix .Segments.Git.Dir .PWD }}{{ else }}{{ .Path }}{{ end }}</> '
 
-# path block properties 
+# path block properties
     [blocks.segments.properties]
-      style = 'full'
+      style = 'agnoster_full'
 
-# git block
-[[blocks]]
-  type = 'prompt'
-  alignment = 'left'
-
+# git segment
   [[blocks.segments]]
     type = 'git'
     style = 'powerline'
@@ -136,7 +132,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
 
 # executiontime properties
     [blocks.segments.properties]
-      threshold = 5000
+      threshold = 2000
 ###############
 # second line #
 ###############
@@ -151,12 +147,12 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
     type = 'text'
     style = 'plain'
     foreground_templates = ['{{if gt .Code 0}}red{{end}}',]
-    foreground = 'green'
-    template = '❯'
+    foreground = 'lightGreen'
+    template = '➜'
 
 # what previous prompts look like
 [transient_prompt]
   background = 'transparent'
-  foreground = 'green' 
+  foreground = 'lightGreen'
   foreground_templates = ['{{if gt .Code 0}}red{{end}}',]
-  template = '❯ '
+  template = '➜ '

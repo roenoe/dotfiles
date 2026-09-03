@@ -95,22 +95,22 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
       commit_icon = '@'
       fetch_status = true
 
-# time block 
+# executiontime block (also feeds .Segments.Executiontime to the transient prompt)
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
 
   [[blocks.segments]]
-    type = 'time'
+    type = 'executiontime'
     style = 'powerline'
     powerline_symbol = ''
-    foreground = 'p:cyan'
+    foreground = 'p:yellow'
     background = 'p:background'
-    template = ' {{ .CurrentDate | date .Format}} '
+    template = ' {{ .FormattedMs }} '
 
-# time block properties
+# only report commands slower than 5s
     [blocks.segments.properties]
-      time_format = '15:04'
+      threshold = 5000
 
 ###############
 # right block #
@@ -120,19 +120,19 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
   type = 'rprompt'
   overflow = 'hidden'
 
-# executiontime block
+# time block
   [[blocks.segments]]
-    type = 'executiontime'
+    type = 'time'
     style = 'diamond'
     leading_diamond = ' '
     trailing_diamond = ''
-    foreground = 'p:yellow'
+    foreground = 'p:cyan'
     background = 'p:background'
-    template = '{{ .FormattedMs }}'
+    template = '{{ .CurrentDate | date .Format}}'
 
-# executiontime properties
+# time block properties
     [blocks.segments.properties]
-      threshold = 2000
+      time_format = '15:04'
 ###############
 # second line #
 ###############
@@ -155,4 +155,4 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
   background = 'transparent'
   foreground = 'lightGreen'
   foreground_templates = ['{{if gt .Code 0}}red{{end}}',]
-  template = '➜ '
+  template = '{{ if .Segments.Executiontime.FormattedMs }}<p:yellow>{{ .Segments.Executiontime.FormattedMs }}</> {{ end }}➜ '

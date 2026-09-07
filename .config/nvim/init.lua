@@ -925,6 +925,32 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
+    config = function(_, opts)
+      -- Nvim 0.12 dropped the `all = false` option for query predicates/directives,
+      -- so handlers now always receive `match[id]` as a *list* of nodes. This branch
+      -- of nvim-treesitter still expects a single node, which crashes the highlighter
+      -- (e.g. on markdown fenced code blocks). Flatten the match for its handlers.
+      -- Harmless on Nvim 0.10 (Debian trixie), where the values are already nodes.
+      local tsq = require 'vim.treesitter.query'
+      local add_predicate, add_directive = tsq.add_predicate, tsq.add_directive
+      local function flatten(fn)
+        return function(name, handler, o)
+          return fn(name, function(match, ...)
+            local single = {}
+            for id, nodes in pairs(match) do
+              single[id] = type(nodes) == 'table' and nodes[#nodes] or nodes
+            end
+            return handler(single, ...)
+          end, o)
+        end
+      end
+      tsq.add_predicate, tsq.add_directive = flatten(add_predicate), flatten(add_directive)
+      package.loaded['nvim-treesitter.query_predicates'] = nil
+      require 'nvim-treesitter.query_predicates'
+      tsq.add_predicate, tsq.add_directive = add_predicate, add_directive
+
+      require('nvim-treesitter.configs').setup(opts)
+    end,
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
       ensure_installed = {

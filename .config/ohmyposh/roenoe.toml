@@ -75,7 +75,7 @@ enable_cursor_positioning = true  # if you have issues with your prompt taking a
     powerline_symbol = ''
     foreground = 'p:yellow'
     background = 'p:background'
-    template = ' {{ if and .Segments.Git.RepoName (ne .Segments.Git.RepoName .Path) }}{{ .Segments.Git.RepoName }}{{ trimPrefix .Segments.Git.Dir .PWD }}{{ else }}{{ .Path }}{{ end }}</> '
+    template = ' {{ if and .Segments.Git.RepoName (ne .Segments.Git.RepoName .Path) }}{{ .Segments.Git.RepoName }}{{ trimPrefix .Segments.Git.Dir .PWD }}{{ else }}{{ if not (or (hasPrefix "~" .Path) (hasPrefix "/" .Path)) }}/{{ end }}{{ .Path }}{{ end }}</> '
 
 # path block properties
     [blocks.segments.properties]

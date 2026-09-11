@@ -23,7 +23,7 @@ alias vi nvim
 alias vim nvim
 alias vimdiff "nvim -d"
 ## Eza
-alias ls "exa --icons=always -ah --group-directories-first"
+alias ls "eza --icons=always -ah --group-directories-first"
 alias ll "ls -l --git"
 alias lsa "ls -l --total-size"
 ## Other

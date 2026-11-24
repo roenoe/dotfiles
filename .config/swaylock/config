@@ -1,0 +1,55 @@
+# Gruvbox dark — matches sway/waybar/fuzzel (orange accent)
+# Colors are RRGGBBAA
+
+font=Maple Mono Normal NF
+font-size=28
+
+ignore-empty-password
+indicator-idle-visible
+show-failed-attempts
+indicator-caps-lock
+
+indicator-radius=140
+indicator-thickness=12
+scaling=fill
+color=181616
+
+# Transparent lines/separator for a clean ring
+line-uses-inside
+separator-color=00000000
+
+# Idle
+inside-color=181616cc
+ring-color=504945ff
+text-color=ebdbb2ff
+
+# Typing / backspace highlights
+key-hl-color=d65d0eff
+bs-hl-color=cc241dff
+caps-lock-key-hl-color=fabd2fff
+caps-lock-bs-hl-color=cc241dff
+
+# Clearing (input erased)
+inside-clear-color=181616cc
+ring-clear-color=fabd2fff
+text-clear-color=fabd2fff
+
+# Verifying
+inside-ver-color=181616cc
+ring-ver-color=83a598ff
+text-ver-color=83a598ff
+
+# Wrong password
+inside-wrong-color=181616cc
+ring-wrong-color=cc241dff
+text-wrong-color=cc241dff
+
+# Caps lock
+inside-caps-lock-color=181616cc
+ring-caps-lock-color=fabd2fff
+text-caps-lock-color=fabd2fff
+
+# Layout indicator
+layout-bg-color=181616cc
+layout-border-color=00000000
+layout-text-color=ebdbb2ff
